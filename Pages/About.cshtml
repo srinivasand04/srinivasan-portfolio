@@ -1,0 +1,232 @@
+@page
+@model AboutModel
+@{ ViewData["Title"] = "About"; }
+
+<section class="section">
+
+    <!-- Availability badge -->
+    <div class="avail-badge reveal">
+        <span class="avail-dot"></span>
+        <span class="en-text">Seeking 6-month internship (stage) · Paris &amp; Europe · Available immediately</span>
+        <span class="fr-text">Recherche stage 6 mois · Paris &amp; Europe · Disponible immédiatement</span>
+    </div>
+
+    <div class="about-grid">
+
+        <!-- LEFT — Bio -->
+        <div class="reveal">
+            <div class="sec-label">
+                <span class="en-text">About Me</span>
+                <span class="fr-text">À propos</span>
+            </div>
+            <h2 class="sec-title">
+                <span class="en-text">Building Systems That <span>Actually Work</span></span>
+                <span class="fr-text">Concevoir des systèmes qui <span>fonctionnent vraiment</span></span>
+            </h2>
+
+            <p class="about-bio">
+                <span class="en-text">
+                    Hey! I'm <strong>Srinivasan Dhakshanamoorthy</strong> — a <strong>.NET Developer and Data Engineer</strong>
+                    based in <strong>Paris, France</strong>, with 8+ years of enterprise engineering experience at
+                    Bank of America, Cognizant, and LTI Mindtree.
+                </span>
+                <span class="fr-text">
+                    Bonjour ! Je suis <strong>Srinivasan Dhakshanamoorthy</strong> — <strong>développeur .NET et ingénieur Data</strong>
+                    basé à <strong>Paris</strong>, avec plus de 8 ans d'expérience en entreprise chez Bank of America,
+                    Cognizant et LTI Mindtree.
+                </span>
+            </p>
+            <p class="about-bio">
+                <span class="en-text">
+                    Currently completing my <strong>M.Sc. in Data Engineering &amp; AI at ESILV Paris (2026)</strong>,
+                    I am actively looking for a <strong>6-month internship (stage)</strong> or <strong>full-time position</strong>
+                    in .NET, Full Stack, or Data Engineering — across France and Europe.
+                </span>
+                <span class="fr-text">
+                    En dernière année de <strong>Master Data Engineering &amp; IA à l'ESILV Paris (2026)</strong>,
+                    je recherche activement un <strong>stage de 6 mois</strong> ou un <strong>poste CDI</strong>
+                    en .NET, Full Stack ou Data Engineering en France et en Europe.
+                </span>
+            </p>
+            <p class="about-bio">
+                <span class="en-text">
+                    My work spans <strong>full-stack .NET development</strong>, cloud infrastructure on <strong>Azure</strong>,
+                    and applied AI with a focus on <strong>NLP and machine learning</strong>. I enjoy the full engineering
+                    lifecycle — from database schema design all the way to CI/CD deployment.
+                </span>
+                <span class="fr-text">
+                    Mon travail couvre le <strong>développement .NET full-stack</strong>, l'infrastructure cloud sur <strong>Azure</strong>
+                    et l'IA appliquée avec un focus sur le <strong>NLP et le machine learning</strong>. J'apprécie le cycle
+                    complet — de la conception de schéma base de données jusqu'au déploiement CI/CD.
+                </span>
+            </p>
+
+            <ul class="about-list">
+                <li>
+                    <div class="list-icon">⚙️</div>
+                    <div>
+                        <strong><span class="en-text">Backend Engineering</span><span class="fr-text">Ingénierie Backend</span></strong>
+                        — ASP.NET Core, C#, REST APIs, Entity Framework
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">☁️</div>
+                    <div>
+                        <strong><span class="en-text">Cloud &amp; DevOps</span><span class="fr-text">Cloud &amp; DevOps</span></strong>
+                        — Azure, Docker, CI/CD, GitHub Actions, Jenkins
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">📊</div>
+                    <div>
+                        <strong><span class="en-text">Data Engineering</span><span class="fr-text">Ingénierie des données</span></strong>
+                        — Python, Pandas, SQL, ETL pipeline design
+                    </div>
+                </li>
+                <li>
+                    <div class="list-icon">🧠</div>
+                    <div>
+                        <strong>AI &amp; NLP</strong>
+                        — BERT, HuggingFace, LangChain, sentiment classification
+                    </div>
+                </li>
+            </ul>
+
+            <!-- ── CV DOWNLOAD STRIP ── -->
+            <div class="cv-strip reveal">
+                <div class="cv-left">
+                    <div class="cv-icon">📄</div>
+                    <div>
+                        <div class="cv-label">
+                            <span class="en-text">Download CV / Resume</span>
+                            <span class="fr-text">Télécharger le CV</span>
+                        </div>
+                        <div class="cv-sub">
+                            <span class="en-text">English &amp; French — updated April 2026</span>
+                            <span class="fr-text">Anglais &amp; Français — mis à jour avril 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cv-btns">
+                    <a href="/cv/CV_Srinivasan_EN.pdf" class="cv-btn cv-btn-en" download>
+                        🇬🇧 <span class="en-text">English CV</span><span class="fr-text">CV Anglais</span>
+                    </a>
+                    <a href="/cv/CV_Srinivasan_FR.pdf" class="cv-btn cv-btn-fr" download>
+                        🇫🇷 <span class="en-text">CV Français</span><span class="fr-text">Version française</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT — Visual panel -->
+        <div class="reveal">
+            <div class="about-panel">
+                <div class="panel-header">
+                    <div class="win-dot" style="background:#ff5f57"></div>
+                    <div class="win-dot" style="background:#febc2e"></div>
+                    <div class="win-dot" style="background:#28c840"></div>
+                    <span class="panel-title">srinivasan@portfolio — skills.json</span>
+                </div>
+                <div class="panel-code">
+                    <div class="code-line"><span class="ln">1</span><span class="t op">{</span></div>
+                    <div class="code-line"><span class="ln">2</span><span class="t kw">&nbsp; "backend"</span><span class="t op">: </span><span class="t str">["C#","ASP.NET","REST","EF"]</span><span class="t op">,</span></div>
+                    <div class="code-line"><span class="ln">3</span><span class="t kw">&nbsp; "cloud"</span><span class="t op">: </span><span class="t str">["Azure","Docker","CI/CD"]</span><span class="t op">,</span></div>
+                    <div class="code-line"><span class="ln">4</span><span class="t kw">&nbsp; "data"</span><span class="t op">: </span><span class="t str">["Python","SQL","ETL","Spark"]</span><span class="t op">,</span></div>
+                    <div class="code-line"><span class="ln">5</span><span class="t kw">&nbsp; "ai"</span><span class="t op">: </span><span class="t str">["BERT","LangChain","RAG"]</span><span class="t op">,</span></div>
+                    <div class="code-line"><span class="ln">6</span><span class="t kw">&nbsp; "location"</span><span class="t op">: </span><span class="t str">"Paris, France 🇫🇷"</span><span class="t op">,</span></div>
+                    <div class="code-line"><span class="ln">7</span><span class="t kw">&nbsp; "open_to"</span><span class="t op">: </span><span class="t str">["Stage","CDI","Europe"]</span></div>
+                    <div class="code-line"><span class="ln">8</span><span class="t op">}</span></div>
+                </div>
+                <div class="panel-stats">
+                    <div class="panel-stat">
+                        <span class="ps-num">8+</span>
+                        <span class="ps-lbl"><span class="en-text">Years exp.</span><span class="fr-text">Ans exp.</span></span>
+                    </div>
+                    <div class="panel-stat">
+                        <span class="ps-num" style="color:#2563EB;">Azure</span>
+                        <span class="ps-lbl"><span class="en-text">Cloud live</span><span class="fr-text">Cloud déployé</span></span>
+                    </div>
+                    <div class="panel-stat">
+                        <span class="ps-num" style="color:#16A34A;">2026</span>
+                        <span class="ps-lbl">ESILV Paris</span>
+                    </div>
+                </div>
+                <div class="panel-avail">
+                    <div class="pa-dot"></div>
+                    <div class="pa-text">
+                        <strong><span class="en-text">Open to work</span><span class="fr-text">Disponible</span></strong>
+                        <span class="en-text"> — Paris &amp; Europe · Internship &amp; Full-time · Immediately</span>
+                        <span class="fr-text"> — Paris &amp; Europe · Stage &amp; CDI · Immédiatement</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick stats -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;">
+                <div class="stat-card">
+                    <span class="stat-num">BoA</span>
+                    <span class="stat-lbl">Senior Technical Lead</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-lbl"><span class="en-text">AI &amp; Data Projects</span><span class="fr-text">Projets IA &amp; Data</span></span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">500K</span>
+                    <span class="stat-lbl"><span class="en-text">Daily transactions<br>processed at BoA</span><span class="fr-text">Transactions/jour<br>traitées chez BoA</span></span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num">3M+</span>
+                    <span class="stat-lbl"><span class="en-text">Records/day<br>ETL pipelines</span><span class="fr-text">Enreg./jour<br>pipelines ETL</span></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ SERVICES ══════════════════════════════════════════════ -->
+<section class="section reveal">
+    <div class="sec-label">
+        <span class="en-text">What I Do</span>
+        <span class="fr-text">Ce que je fais</span>
+    </div>
+    <h2 class="sec-title">
+        <span class="en-text">Services &amp; <span>Expertise</span></span>
+        <span class="fr-text">Services &amp; <span>Expertise</span></span>
+    </h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <div class="svc-icon">🌐</div>
+            <div class="svc-title"><span class="en-text">Web Development</span><span class="fr-text">Développement Web</span></div>
+            <div class="svc-desc"><span class="en-text">Full-stack ASP.NET Core apps, React.js SPAs, REST APIs — clean architecture, Azure deployed.</span><span class="fr-text">Apps full-stack ASP.NET Core, SPA React.js, REST APIs — architecture propre, déployées sur Azure.</span></div>
+        </div>
+        <div class="service-card">
+            <div class="svc-icon">🔌</div>
+            <div class="svc-title"><span class="en-text">API Development</span><span class="fr-text">Développement API</span></div>
+            <div class="svc-desc"><span class="en-text">Secured REST APIs with OAuth 2.0, JWT, RBAC, Swagger docs and full test coverage.</span><span class="fr-text">APIs REST sécurisées avec OAuth 2.0, JWT, RBAC, documentation Swagger et couverture de tests.</span></div>
+        </div>
+        <div class="service-card">
+            <div class="svc-icon">📊</div>
+            <div class="svc-title"><span class="en-text">Data Engineering</span><span class="fr-text">Ingénierie des données</span></div>
+            <div class="svc-desc"><span class="en-text">ETL pipelines, SQL optimisation, Python workflows — 3M+ records/day at enterprise scale.</span><span class="fr-text">Pipelines ETL, optimisation SQL, workflows Python — 3M+ enregistrements/jour à l'échelle entreprise.</span></div>
+        </div>
+        <div class="service-card">
+            <div class="svc-icon">🧠</div>
+            <div class="svc-title">AI &amp; NLP</div>
+            <div class="svc-desc"><span class="en-text">BERT fine-tuning, RAG pipelines with LangChain + OpenAI, sentiment classification, LLM apps.</span><span class="fr-text">Fine-tuning BERT, pipelines RAG LangChain + OpenAI, classification de sentiments, apps LLM.</span></div>
+        </div>
+        <div class="service-card">
+            <div class="svc-icon">☁️</div>
+            <div class="svc-title"><span class="en-text">Cloud Deployment</span><span class="fr-text">Déploiement Cloud</span></div>
+            <div class="svc-desc"><span class="en-text">Azure App Service, CLI automation, Docker containers, DNS and full CI/CD setup.</span><span class="fr-text">Azure App Service, automatisation CLI, conteneurs Docker, DNS et CI/CD complet.</span></div>
+        </div>
+        <div class="service-card">
+            <div class="svc-icon">🔧</div>
+            <div class="svc-title">DevOps</div>
+            <div class="svc-desc"><span class="en-text">GitHub Actions, Jenkins, GitLab CI/CD, SonarQube, blue/green deployments.</span><span class="fr-text">GitHub Actions, Jenkins, GitLab CI/CD, SonarQube, déploiements blue/green.</span></div>
+        </div>
+    </div>
+</section>

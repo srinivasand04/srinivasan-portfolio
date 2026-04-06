@@ -1,0 +1,486 @@
+@page
+@model ProjectsModel
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<section class="section">
+    <p class="sec-label">My Work</p>
+    <h2 class="sec-title">Projects &amp; <span>Builds</span></h2>
+    <p class="sec-sub">Real-world projects spanning AI/ML, Data Engineering, Computer Vision, and Cloud — built during college and beyond.</p>
+
+    <!-- ── AI & Machine Learning ─────────────────────── -->
+    <h3 class="proj-cat-label">AI &amp; Machine Learning</h3>
+    <div class="projects-grid">
+
+        <!-- Employee Attrition MLOps -->
+        <div class="project-card reveal">
+            <div class="project-banner">
+                <svg viewBox="0 0 330 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="330" height="140" fill="#0d0d1a"/>
+                    <rect x="12" y="50" width="52" height="40" rx="6" fill="#1a1a2e" stroke="#2d2d45" stroke-width="1.2"/>
+                    <text x="38" y="67" font-family="monospace" font-size="7" fill="#5b9df7" text-anchor="middle">Raw</text>
+                    <text x="38" y="78" font-family="monospace" font-size="7" fill="#5b9df7" text-anchor="middle">HR Data</text>
+                    <line x1="66" y1="70" x2="80" y2="70" stroke="#5a5a72" stroke-width="1"/><polygon points="78,67 84,70 78,73" fill="#5a5a72"/>
+                    <rect x="84" y="44" width="52" height="52" rx="6" fill="#1a1a2e" stroke="#c084fc" stroke-width="1.2"/>
+                    <text x="110" y="66" font-family="monospace" font-size="6.5" fill="#c084fc" text-anchor="middle">Feature</text>
+                    <text x="110" y="76" font-family="monospace" font-size="6.5" fill="#c084fc" text-anchor="middle">Eng.</text>
+                    <text x="110" y="86" font-family="monospace" font-size="6" fill="#5a5a72" text-anchor="middle">sklearn</text>
+                    <line x1="138" y1="70" x2="152" y2="70" stroke="#5a5a72" stroke-width="1"/><polygon points="150,67 156,70 150,73" fill="#5a5a72"/>
+                    <rect x="156" y="44" width="52" height="52" rx="6" fill="#1a1a2e" stroke="#e84545" stroke-width="1.5"/>
+                    <text x="182" y="64" font-family="monospace" font-size="6.5" fill="#e84545" text-anchor="middle">XGBoost</text>
+                    <text x="182" y="75" font-family="monospace" font-size="6.5" fill="#e84545" text-anchor="middle">Classifier</text>
+                    <text x="182" y="86" font-family="monospace" font-size="6" fill="#5a5a72" text-anchor="middle">MLflow</text>
+                    <line x1="210" y1="70" x2="224" y2="70" stroke="#5a5a72" stroke-width="1"/><polygon points="222,67 228,70 222,73" fill="#5a5a72"/>
+                    <rect x="228" y="50" width="88" height="40" rx="6" fill="#1a1a2e" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="272" y="66" font-family="monospace" font-size="6.5" fill="#4ade80" text-anchor="middle">Predict:</text>
+                    <text x="272" y="77" font-family="monospace" font-size="6.5" fill="#4ade80" text-anchor="middle">Stay / Leave</text>
+                    <text x="165" y="118" font-family="monospace" font-size="7.5" fill="#5a5a72" text-anchor="middle">IBM HR Dataset · MLOps Pipeline · Model Registry</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">XGBoost</span>
+                    <span class="project-tag">MLflow</span>
+                    <span class="project-tag">Scikit-learn</span>
+                </div>
+                <div class="project-title">Employee Attrition — MLOps Pipeline</div>
+                <div class="project-desc">
+                    End-to-end MLOps pipeline predicting employee attrition on IBM HR dataset.
+                    Covers feature engineering, XGBoost classification, MLflow experiment
+                    tracking, model registry, and production MLOps best practices.
+                </div>
+                <div class="project-foot">
+                    <a class="project-link" href="https://github.com/srinivasand04/employee-attrition-mlops" target="_blank">GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stock Market ML/DL -->
+        <div class="project-card reveal">
+            <div class="project-banner">
+                <svg viewBox="0 0 330 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="330" height="140" fill="#0d0d1a"/>
+                    <polyline points="20,100 55,82 90,92 125,60 160,72 195,44 230,56 265,38 300,28" fill="none" stroke="#4ade80" stroke-width="1.8"/>
+                    <polyline points="20,100 55,92 90,102 125,82 160,90 195,72 230,80 265,65 300,55" fill="none" stroke="#e84545" stroke-width="1" stroke-dasharray="4,3"/>
+                    <rect x="50" y="76" width="8" height="14" rx="1" fill="#4ade80" opacity="0.7"/>
+                    <rect x="120" y="54" width="8" height="20" rx="1" fill="#4ade80" opacity="0.7"/>
+                    <rect x="190" y="40" width="8" height="22" rx="1" fill="#4ade80" opacity="0.7"/>
+                    <rect x="85" y="88" width="8" height="12" rx="1" fill="#e84545" opacity="0.7"/>
+                    <rect x="155" y="66" width="8" height="16" rx="1" fill="#e84545" opacity="0.7"/>
+                    <rect x="10" y="110" width="75" height="18" rx="4" fill="rgba(192,132,252,0.12)" stroke="#c084fc" stroke-width="0.8"/>
+                    <text x="47" y="122" font-family="monospace" font-size="7" fill="#c084fc" text-anchor="middle">LSTM · RNN</text>
+                    <rect x="95" y="110" width="80" height="18" rx="4" fill="rgba(91,157,247,0.1)" stroke="#5b9df7" stroke-width="0.8"/>
+                    <text x="135" y="122" font-family="monospace" font-size="7" fill="#5b9df7" text-anchor="middle">Random Forest</text>
+                    <rect x="185" y="110" width="130" height="18" rx="4" fill="rgba(232,69,69,0.1)" stroke="#e84545" stroke-width="0.8"/>
+                    <text x="250" y="122" font-family="monospace" font-size="7" fill="#e84545" text-anchor="middle">Deep Learning · Backtest</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="project-tag">LSTM</span>
+                    <span class="project-tag">TensorFlow</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">Random Forest</span>
+                </div>
+                <div class="project-title">Stock Market — ML &amp; DL Prediction</div>
+                <div class="project-desc">
+                    Comparative study of ML and DL models for stock price prediction.
+                    Implements LSTM/RNN for sequence modeling alongside Random Forest.
+                    Includes time-series preprocessing, backtesting, and model comparison.
+                </div>
+                <div class="project-foot">
+                    <a class="project-link" href="https://github.com/srinivasand04/Stock-Market-ML-DL-Prediction_Deep_Learning" target="_blank">GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- GenAI LLM -->
+        <div class="project-card reveal">
+            <div class="project-banner">
+                <svg viewBox="0 0 330 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="330" height="140" fill="#0d0d1a"/>
+                    <rect x="18" y="18" width="160" height="24" rx="8" fill="#1e1e35" stroke="#2d2d45" stroke-width="1"/>
+                    <text x="30" y="33" font-family="monospace" font-size="7.5" fill="#9494a8">User: Explain transformers...</text>
+                    <rect x="18" y="50" width="200" height="24" rx="8" fill="rgba(192,132,252,0.1)" stroke="#c084fc" stroke-width="0.8"/>
+                    <text x="30" y="65" font-family="monospace" font-size="7.5" fill="#c084fc">LLM: Transformers use attention...</text>
+                    <rect x="18" y="82" width="150" height="24" rx="8" fill="#1e1e35" stroke="#2d2d45" stroke-width="1"/>
+                    <text x="30" y="97" font-family="monospace" font-size="7.5" fill="#9494a8">User: Show me code examples</text>
+                    <rect x="18" y="114" width="220" height="20" rx="8" fill="rgba(192,132,252,0.1)" stroke="#c084fc" stroke-width="0.8"/>
+                    <text x="30" y="127" font-family="monospace" font-size="7.5" fill="#c084fc">LLM: Here's Python code for that...</text>
+                    <rect x="242" y="28" width="76" height="18" rx="4" fill="rgba(192,132,252,0.12)" stroke="#c084fc" stroke-width="0.8"/>
+                    <text x="280" y="40" font-family="monospace" font-size="7" fill="#c084fc" text-anchor="middle">RAG Chain</text>
+                    <rect x="242" y="54" width="76" height="18" rx="4" fill="rgba(232,69,69,0.1)" stroke="#e84545" stroke-width="0.8"/>
+                    <text x="280" y="66" font-family="monospace" font-size="7" fill="#e84545" text-anchor="middle">LangChain</text>
+                    <rect x="242" y="80" width="76" height="18" rx="4" fill="rgba(74,222,128,0.1)" stroke="#4ade80" stroke-width="0.8"/>
+                    <text x="280" y="92" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle">OpenAI API</text>
+                    <rect x="242" y="106" width="76" height="18" rx="4" fill="rgba(91,157,247,0.1)" stroke="#5b9df7" stroke-width="0.8"/>
+                    <text x="280" y="118" font-family="monospace" font-size="7" fill="#5b9df7" text-anchor="middle">Embeddings</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="project-tag">LangChain</span>
+                    <span class="project-tag">OpenAI</span>
+                    <span class="project-tag">RAG</span>
+                    <span class="project-tag">Python</span>
+                </div>
+                <div class="project-title">GenAI &amp; LLM Project</div>
+                <div class="project-desc">
+                    Generative AI application using LangChain + OpenAI. Implements RAG
+                    (Retrieval-Augmented Generation), vector embeddings, prompt engineering,
+                    and intelligent Q&amp;A workflows on custom document corpora.
+                </div>
+                <div class="project-foot">
+                    <a class="project-link" href="https://github.com/srinivasand04/GenAI_LLM" target="_blank">GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NLP Project -->
+        <div class="project-card reveal">
+            <div class="project-banner">
+                <svg viewBox="0 0 330 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="330" height="140" fill="#0d0d1a"/>
+                    <text x="20" y="45" font-family="monospace" font-size="9" fill="#5a5a72">"The product was</text>
+                    <text x="20" y="58" font-family="monospace" font-size="9" fill="#e84545">absolutely</text>
+                    <text x="120" y="58" font-family="monospace" font-size="9" fill="#5a5a72">amazing!"</text>
+                    <line x1="165" y1="64" x2="165" y2="76" stroke="#5a5a72" stroke-width="1"/>
+                    <polygon points="162,74 165,80 168,74" fill="#5a5a72"/>
+                    <rect x="100" y="80" width="130" height="26" rx="6" fill="#1a1a2e" stroke="#c084fc" stroke-width="1.5"/>
+                    <text x="165" y="97" font-family="monospace" font-size="8" fill="#c084fc" text-anchor="middle">BERT Transformer</text>
+                    <line x1="165" y1="106" x2="165" y2="114" stroke="#5a5a72" stroke-width="1"/>
+                    <polygon points="162,112 165,118 168,112" fill="#5a5a72"/>
+                    <rect x="58" y="118" width="68" height="14" rx="3" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="0.8"/>
+                    <text x="92" y="128" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle">&#9679; Positive</text>
+                    <rect x="131" y="118" width="68" height="14" rx="3" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="0.8"/>
+                    <text x="165" y="128" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="middle">&#9679; Neutral</text>
+                    <rect x="204" y="118" width="68" height="14" rx="3" fill="rgba(232,69,69,0.15)" stroke="#e84545" stroke-width="0.8"/>
+                    <text x="238" y="128" font-family="monospace" font-size="7" fill="#e84545" text-anchor="middle">&#9679; Negative</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="project-tag">BERT</span>
+                    <span class="project-tag">HuggingFace</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">NLP</span>
+                </div>
+                <div class="project-title">NLP Project — Text Classification</div>
+                <div class="project-desc">
+                    NLP pipeline applying fine-tuned BERT for text classification and sentiment
+                    analysis. Covers tokenization, model fine-tuning on Yelp/IMDB, evaluation
+                    metrics (F1, precision, recall), and HuggingFace hub integration.
+                </div>
+                <div class="project-foot">
+                    <a class="project-link" href="https://github.com/srinivasand04/NLP_Project" target="_blank">GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ── Data Engineering ──────────────────────────── -->
+    <h3 class="proj-cat-label">Data Engineering &amp; Big Data</h3>
+    <div class="projects-grid">
+
+        <!-- Big Data -->
+        <div class="project-card reveal">
+            <div class="project-banner">
+                <svg viewBox="0 0 330 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="330" height="140" fill="#0d0d1a"/>
+                    <rect x="10" y="40" width="60" height="28" rx="5" fill="#1a1a2e" stroke="#f7d05b" stroke-width="1"/>
+                    <text x="40" y="57" font-family="monospace" font-size="7" fill="#f7d05b" text-anchor="middle">HDFS</text>
+                    <line x1="72" y1="54" x2="86" y2="54" stroke="#5a5a72" stroke-width="1"/><polygon points="84,51 90,54 84,57" fill="#5a5a72"/>
+                    <rect x="90" y="32" width="60" height="44" rx="5" fill="#1a1a2e" stroke="#e84545" stroke-width="1.5"/>
+                    <text x="120" y="52" font-family="monospace" font-size="7" fill="#e84545" text-anchor="middle">Apache</text>
+                    <text x="120" y="63" font-family="monospace" font-size="7" fill="#e84545" text-anchor="middle">Spark</text>
+                    <line x1="152" y1="54" x2="166" y2="54" stroke="#5a5a72" stroke-width="1"/><polygon points="164,51 170,54 164,57" fill="#5a5a72"/>
+                    <rect x="170" y="40" width="60" height="28" rx="5" fill="#1a1a2e" stroke="#5b9df7" stroke-width="1"/>
+                    <text x="200" y="57" font-family="monospace" font-size="7" fill="#5b9df7" text-anchor="middle">PySpark</text>
+                    <line x1="232" y1="54" x2="246" y2="54" stroke="#5a5a72" stroke-width="1"/><polygon points="244,51 250,54 244,57" fill="#5a5a72"/>
+                    <rect x="250" y="40" width="68" height="28" rx="5" fill="#1a1a2e" stroke="#4ade80" stroke-width="1"/>
+                    <text x="284" y="50" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle">Analytics</text>
+                    <text x="284" y="62" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle">Output</text>
+                    <rect x="10" y="88" width="80" height="30" rx="6" fill="#13131e" stroke="#2d2d45" stroke-width="1"/>
+                    <text x="50" y="102" font-family="monospace" font-size="7.5" fill="#f7d05b" text-anchor="middle">MapReduce</text>
+                    <text x="50" y="113" font-family="monospace" font-size="6.5" fill="#5a5a72" text-anchor="middle">Batch Jobs</text>
+                    <rect x="100" y="88" width="80" height="30" rx="6" fill="#13131e" stroke="#2d2d45" stroke-width="1"/>
+                    <text x="140" y="102" font-family="monospace" font-size="7.5" fill="#e84545" text-anchor="middle">Spark SQL</text>
+                    <text x="140" y="113" font-family="monospace" font-size="6.5" fill="#5a5a72" text-anchor="middle">Dist. Queries</text>
+                    <rect x="190" y="88" width="128" height="30" rx="6" fill="#13131e" stroke="#2d2d45" stroke-width="1"/>
+                    <text x="254" y="102" font-family="monospace" font-size="7.5" fill="#5b9df7" text-anchor="middle">Visualization</text>
+                    <text x="254" y="113" font-family="monospace" font-size="6.5" fill="#5a5a72" text-anchor="middle">Matplotlib · Seaborn</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="project-tag">Apache Spark</span>
+                    <span class="project-tag">PySpark</span>
+                    <span class="project-tag">Hadoop</span>
+                    <span class="project-tag">HDFS</span>
+                </div>
+                <div class="project-title">Big Data Project — Spark &amp; Hadoop</div>
+                <div class="project-desc">
+                    Large-scale data processing using Apache Spark and Hadoop. Implements
+                    MapReduce batch jobs, Spark SQL for distributed queries, PySpark
+                    transformations, and analytics with Matplotlib/Seaborn visualization.
+                </div>
+                <div class="project-foot">
+                    <a class="project-link" href="https://github.com/srinivasand04/BigData_Project" target="_blank">GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SQL to NoSQL -->
+        <div class="project-card reveal">
+            <div class="project-banner">
+                <svg viewBox="0 0 330 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="330" height="140" fill="#0d0d1a"/>
+                    <rect x="12" y="24" width="100" height="92" rx="8" fill="#1a1a2e" stroke="#5b9df7" stroke-width="1.2"/>
+                    <text x="62" y="45" font-family="monospace" font-size="8" fill="#5b9df7" text-anchor="middle">PostgreSQL</text>
+                    <rect x="22" y="52" width="80" height="5" rx="2" fill="#2d2d45"/>
+                    <rect x="22" y="61" width="60" height="4" rx="2" fill="#2d2d45" opacity="0.7"/>
+                    <rect x="22" y="69" width="70" height="4" rx="2" fill="#2d2d45" opacity="0.5"/>
+                    <rect x="22" y="77" width="55" height="4" rx="2" fill="#2d2d45" opacity="0.4"/>
+                    <text x="62" y="106" font-family="monospace" font-size="7" fill="#5a5a72" text-anchor="middle">Relational</text>
+                    <rect x="120" y="52" width="90" height="36" rx="6" fill="rgba(232,69,69,0.1)" stroke="#e84545" stroke-width="1.2"/>
+                    <text x="165" y="68" font-family="monospace" font-size="7" fill="#e84545" text-anchor="middle">Migration</text>
+                    <text x="165" y="80" font-family="monospace" font-size="7" fill="#e84545" text-anchor="middle">Framework</text>
+                    <line x1="115" y1="70" x2="122" y2="70" stroke="#5a5a72" stroke-width="1"/>
+                    <line x1="208" y1="70" x2="218" y2="70" stroke="#5a5a72" stroke-width="1"/>
+                    <polygon points="216,67 222,70 216,73" fill="#5a5a72"/>
+                    <rect x="220" y="24" width="100" height="92" rx="8" fill="#1a1a2e" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="270" y="45" font-family="monospace" font-size="8" fill="#4ade80" text-anchor="middle">MongoDB</text>
+                    <text x="228" y="60" font-family="monospace" font-size="7" fill="#5a5a72">{"_id": 1,</text>
+                    <text x="228" y="71" font-family="monospace" font-size="7" fill="#5a5a72"> "name":</text>
+                    <text x="270" y="71" font-family="monospace" font-size="7" fill="#4ade80">"val"</text>
+                    <text x="228" y="82" font-family="monospace" font-size="7" fill="#5a5a72"> "meta": {}}</text>
+                    <text x="270" y="106" font-family="monospace" font-size="7" fill="#5a5a72" text-anchor="middle">Document DB</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">PostgreSQL</span>
+                    <span class="project-tag">MongoDB</span>
+                    <span class="project-tag">ETL</span>
+                </div>
+                <div class="project-title">SQL to NoSQL Migration Framework</div>
+                <div class="project-desc">
+                    Reusable framework automating relational-to-document DB migration.
+                    Handles schema transformation from PostgreSQL to MongoDB, data type
+                    mapping, relationship flattening, validation, and rollback support.
+                </div>
+                <div class="project-foot">
+                    <a class="project-link" href="https://github.com/srinivasand04/sql-to-nosql-migration-framework" target="_blank">GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph Mining -->
+        <div class="project-card reveal">
+            <div class="project-banner">
+                <svg viewBox="0 0 330 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="330" height="140" fill="#0d0d1a"/>
+                    <circle cx="165" cy="55" r="18" fill="#1e1e35" stroke="#e84545" stroke-width="2"/>
+                    <text x="165" y="59" font-family="monospace" font-size="7.5" fill="#e84545" text-anchor="middle">Hub</text>
+                    <circle cx="78" cy="38" r="12" fill="#1e1e35" stroke="#5b9df7" stroke-width="1.2"/>
+                    <text x="78" y="42" font-family="monospace" font-size="6.5" fill="#5b9df7" text-anchor="middle">A</text>
+                    <circle cx="252" cy="38" r="12" fill="#1e1e35" stroke="#5b9df7" stroke-width="1.2"/>
+                    <text x="252" y="42" font-family="monospace" font-size="6.5" fill="#5b9df7" text-anchor="middle">B</text>
+                    <circle cx="58" cy="105" r="11" fill="#1e1e35" stroke="#4ade80" stroke-width="1"/>
+                    <text x="58" y="109" font-family="monospace" font-size="6.5" fill="#4ade80" text-anchor="middle">C</text>
+                    <circle cx="272" cy="105" r="11" fill="#1e1e35" stroke="#4ade80" stroke-width="1"/>
+                    <text x="272" y="109" font-family="monospace" font-size="6.5" fill="#4ade80" text-anchor="middle">D</text>
+                    <circle cx="165" cy="112" r="11" fill="#1e1e35" stroke="#c084fc" stroke-width="1"/>
+                    <text x="165" y="116" font-family="monospace" font-size="6.5" fill="#c084fc" text-anchor="middle">E</text>
+                    <line x1="148" y1="47" x2="90" y2="41" stroke="#5b9df7" stroke-width="1" opacity="0.6"/>
+                    <line x1="182" y1="47" x2="240" y2="41" stroke="#5b9df7" stroke-width="1" opacity="0.6"/>
+                    <line x1="153" y1="67" x2="67" y2="98" stroke="#4ade80" stroke-width="1" opacity="0.5"/>
+                    <line x1="177" y1="67" x2="263" y2="98" stroke="#4ade80" stroke-width="1" opacity="0.5"/>
+                    <line x1="165" y1="73" x2="165" y2="101" stroke="#c084fc" stroke-width="1" opacity="0.5"/>
+                    <line x1="68" y1="111" x2="154" y2="112" stroke="#c084fc" stroke-width="0.8" opacity="0.4"/>
+                    <line x1="176" y1="114" x2="261" y2="110" stroke="#c084fc" stroke-width="0.8" opacity="0.4"/>
+                    <text x="165" y="135" font-family="monospace" font-size="7.5" fill="#5a5a72" text-anchor="middle">NetworkX · Community Detection · Centrality</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">NetworkX</span>
+                    <span class="project-tag">Graph Mining</span>
+                    <span class="project-tag">Neo4j</span>
+                </div>
+                <div class="project-title">Graph Systems Mining</div>
+                <div class="project-desc">
+                    Graph data mining using NetworkX on real-world network datasets.
+                    Implements community detection, centrality measures, shortest path
+                    algorithms, link prediction, and graph visualization.
+                </div>
+                <div class="project-foot">
+                    <a class="project-link" href="https://github.com/srinivasand04/GraphSystemsMining" target="_blank">GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ── Computer Vision & Cloud ───────────────────── -->
+    <h3 class="proj-cat-label">Computer Vision &amp; Dashboards</h3>
+    <div class="projects-grid">
+
+        <!-- Computer Vision -->
+        <div class="project-card reveal">
+            <div class="project-banner">
+                <svg viewBox="0 0 330 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="330" height="140" fill="#0d0d1a"/>
+                    <rect x="30" y="22" width="120" height="90" rx="6" fill="#1a1a2e" stroke="#2d2d45" stroke-width="1.5"/>
+                    <rect x="42" y="35" width="45" height="52" rx="3" fill="none" stroke="#e84545" stroke-width="1.5"/>
+                    <text x="42" y="33" font-family="monospace" font-size="6.5" fill="#e84545">person 0.94</text>
+                    <rect x="90" y="47" width="38" height="36" rx="3" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+                    <text x="90" y="45" font-family="monospace" font-size="6.5" fill="#4ade80">car 0.88</text>
+                    <rect x="168" y="26" width="24" height="88" rx="4" fill="rgba(232,69,69,0.15)" stroke="#e84545" stroke-width="0.8"/>
+                    <text x="180" y="73" font-family="monospace" font-size="6" fill="#e84545" text-anchor="middle" transform="rotate(-90,180,73)">Conv</text>
+                    <rect x="198" y="34" width="20" height="72" rx="4" fill="rgba(192,132,252,0.15)" stroke="#c084fc" stroke-width="0.8"/>
+                    <text x="208" y="73" font-family="monospace" font-size="6" fill="#c084fc" text-anchor="middle" transform="rotate(-90,208,73)">Pool</text>
+                    <rect x="224" y="42" width="18" height="56" rx="4" fill="rgba(91,157,247,0.15)" stroke="#5b9df7" stroke-width="0.8"/>
+                    <text x="233" y="73" font-family="monospace" font-size="6" fill="#5b9df7" text-anchor="middle" transform="rotate(-90,233,73)">FC</text>
+                    <rect x="248" y="52" width="14" height="36" rx="4" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="0.8"/>
+                    <text x="255" y="73" font-family="monospace" font-size="6" fill="#4ade80" text-anchor="middle" transform="rotate(-90,255,73)">Out</text>
+                    <text x="165" y="128" font-family="monospace" font-size="7.5" fill="#5a5a72" text-anchor="middle">OpenCV · YOLO · CNN · Object Detection</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="project-tag">OpenCV</span>
+                    <span class="project-tag">YOLO</span>
+                    <span class="project-tag">CNN</span>
+                    <span class="project-tag">Python</span>
+                </div>
+                <div class="project-title">Computer Vision — Object Detection</div>
+                <div class="project-desc">
+                    Computer vision pipeline using OpenCV and deep learning for object detection
+                    and image classification. Implements CNN architectures, YOLO detection,
+                    bounding box visualization, and image preprocessing.
+                </div>
+                <div class="project-foot">
+                    <a class="project-link" href="https://github.com/srinivasand04/ComputerVision" target="_blank">GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Streamlit Dashboard -->
+        <div class="project-card reveal">
+            <div class="project-banner">
+                <svg viewBox="0 0 330 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="330" height="140" fill="#0d0d1a"/>
+                    <rect x="12" y="14" width="306" height="108" rx="8" fill="#13131e" stroke="#2d2d45" stroke-width="1.2"/>
+                    <rect x="12" y="14" width="306" height="18" rx="8" fill="#1a1a2e"/>
+                    <rect x="12" y="22" width="306" height="10" rx="0" fill="#1a1a2e"/>
+                    <text x="30" y="27" font-family="monospace" font-size="7" fill="#e84545">Streamlit Analytics Dashboard</text>
+                    <rect x="20" y="38" width="58" height="26" rx="5" fill="#1e1e35"/>
+                    <text x="49" y="51" font-family="monospace" font-size="9" fill="#60a5fa" text-anchor="middle">94%</text>
+                    <text x="49" y="60" font-family="monospace" font-size="6" fill="#5a5a72" text-anchor="middle">Accuracy</text>
+                    <rect x="84" y="38" width="58" height="26" rx="5" fill="#1e1e35"/>
+                    <text x="113" y="51" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle">1.2M</text>
+                    <text x="113" y="60" font-family="monospace" font-size="6" fill="#5a5a72" text-anchor="middle">Records</text>
+                    <rect x="148" y="38" width="58" height="26" rx="5" fill="#1e1e35"/>
+                    <text x="177" y="51" font-family="monospace" font-size="9" fill="#c084fc" text-anchor="middle">0.92</text>
+                    <text x="177" y="60" font-family="monospace" font-size="6" fill="#5a5a72" text-anchor="middle">F1 Score</text>
+                    <rect x="212" y="38" width="98" height="26" rx="5" fill="#1e1e35"/>
+                    <text x="261" y="51" font-family="monospace" font-size="9" fill="#f7d05b" text-anchor="middle">87ms</text>
+                    <text x="261" y="60" font-family="monospace" font-size="6" fill="#5a5a72" text-anchor="middle">Avg Response</text>
+                    <rect x="20" y="72" width="155" height="42" rx="5" fill="#1e1e35"/>
+                    <polyline points="28,108 48,96 68,100 88,88 108,92 128,82 148,86 166,78" fill="none" stroke="#e84545" stroke-width="1.5"/>
+                    <rect x="185" y="72" width="125" height="42" rx="5" fill="#1e1e35"/>
+                    <rect x="193" y="90" width="14" height="20" rx="2" fill="#5b9df7" opacity="0.8"/>
+                    <rect x="211" y="84" width="14" height="26" rx="2" fill="#4ade80" opacity="0.8"/>
+                    <rect x="229" y="92" width="14" height="18" rx="2" fill="#c084fc" opacity="0.8"/>
+                    <rect x="247" y="86" width="14" height="24" rx="2" fill="#e84545" opacity="0.8"/>
+                    <rect x="265" y="80" width="14" height="30" rx="2" fill="#f7d05b" opacity="0.8"/>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="project-tag">Streamlit</span>
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">Pandas</span>
+                    <span class="project-tag">Plotly</span>
+                </div>
+                <div class="project-title">Streamlit Analytics Dashboard</div>
+                <div class="project-desc">
+                    Interactive analytics dashboard built with Streamlit for real-time data
+                    visualization. Features dynamic KPI cards, Plotly charts, data filters,
+                    and ML model output display — all in a shareable web app.
+                </div>
+                <div class="project-foot">
+                    <a class="project-link" href="https://github.com/srinivasand04/python--m-streamlit-run-dashboard.py" target="_blank">GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="project-card reveal">
+            <div class="project-banner">
+                <svg viewBox="0 0 330 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="330" height="140" fill="#0d0d1a"/>
+                    <rect x="40" y="16" width="250" height="98" rx="8" fill="#13131e" stroke="#2d2d45" stroke-width="1.5"/>
+                    <rect x="40" y="16" width="250" height="22" rx="8" fill="#1a1a2e"/>
+                    <rect x="40" y="28" width="250" height="10" rx="0" fill="#1a1a2e"/>
+                    <circle cx="55" cy="27" r="4" fill="#ff5f57"/><circle cx="66" cy="27" r="4" fill="#febc2e"/><circle cx="77" cy="27" r="4" fill="#28c840"/>
+                    <text x="165" y="31" font-family="monospace" font-size="6" fill="#5a5a72" text-anchor="middle">srinivasand-portfolio.azurewebsites.net</text>
+                    <rect x="52" y="44" width="50" height="5" rx="2.5" fill="#e84545" opacity="0.8"/>
+                    <rect x="52" y="54" width="90" height="4" rx="2" fill="#2d2d45"/>
+                    <rect x="52" y="62" width="70" height="4" rx="2" fill="#2d2d45" opacity="0.6"/>
+                    <rect x="52" y="72" width="44" height="8" rx="4" fill="#e84545" opacity="0.5"/>
+                    <rect x="180" y="40" width="96" height="68" rx="6" fill="#1e1e35"/>
+                    <circle cx="228" cy="64" r="22" fill="#2d2d48" stroke="#e84545" stroke-width="1.5"/>
+                    <text x="165" y="128" font-family="monospace" font-size="7.5" fill="#5a5a72" text-anchor="middle">ASP.NET Core · Azure F1 · DNS · Deployed ✓</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-tags">
+                    <span class="project-tag">ASP.NET Core</span>
+                    <span class="project-tag">Azure</span>
+                    <span class="project-tag">.NET 10</span>
+                    <span class="project-tag">DNS</span>
+                </div>
+                <div class="project-title">Portfolio Website — Srinivasand.com</div>
+                <div class="project-desc">
+                    This very site — ASP.NET Core Razor Pages on .NET 10, deployed to Azure
+                    App Service (F1). Full DevOps cycle: Azure CLI, resource groups, and
+                    DNS configuration via Namecheap.
+                </div>
+                <div class="project-foot">
+                    <a class="project-link" href="https://github.com/srinivasand04" target="_blank">GitHub →</a>
+                    <span class="project-status status-live">&#9679; Live</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@section Scripts {
+<style>
+.proj-cat-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin: 56px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.proj-cat-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+</style>
+}

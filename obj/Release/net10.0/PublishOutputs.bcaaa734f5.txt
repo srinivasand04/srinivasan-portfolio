@@ -1,0 +1,7 @@
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\PortfolioWebsite.exe
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\appsettings.Development.json
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\appsettings.json
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\PortfolioWebsite.dll
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\PortfolioWebsite.deps.json
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\PortfolioWebsite.runtimeconfig.json
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\PortfolioWebsite.pdb

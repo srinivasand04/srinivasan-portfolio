@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] — Srinivasan Dhakshanamoorthy</title>
+    <meta name="description" content="Srinivasan Dhakshanamoorthy — .NET Developer, Data Engineer & AI Enthusiast. Based in Paris, seeking internship and full-time roles in France & Europe." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PortfolioWebsite.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="site-nav" id="siteNav">
+        <div class="nav-inner">
+            <a class="nav-brand" asp-page="/Index">Srinivasan<span>.</span></a>
+
+            <a class="nav-link" asp-page="/Index" id="nav-home">
+                <span class="en-text">Home</span>
+                <span class="fr-text">Accueil</span>
+            </a>
+            <a class="nav-link" asp-page="/About" id="nav-about">
+                <span class="en-text">About</span>
+                <span class="fr-text">À propos</span>
+            </a>
+            <a class="nav-link" asp-page="/Projects" id="nav-projects">
+                <span class="en-text">Projects</span>
+                <span class="fr-text">Projets</span>
+            </a>
+
+            <a class="nav-link nav-cta" asp-page="/About">
+                <span class="en-text">Hire Me</span>
+                <span class="fr-text">Me contacter</span>
+            </a>
+
+            <!-- Language toggle -->
+            <div class="lang-toggle">
+                <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ── CONTENT ── -->
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">Srinivasan<span>.</span></div>
+            <div class="footer-note">
+                <span class="en-text">Hosted on Azure · © @DateTime.Now.Year</span>
+                <span class="fr-text">Hébergé sur Azure · © @DateTime.Now.Year</span>
+            </div>
+            <div class="footer-links">
+                <a asp-page="/About"><span class="en-text">About</span><span class="fr-text">À propos</span></a>
+                <a asp-page="/Projects"><span class="en-text">Projects</span><span class="fr-text">Projets</span></a>
+                <a href="https://linkedin.com/in/srinivasand04" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Srinivasand04" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        // ── Navbar scroll
+        const nav = document.getElementById('siteNav');
+        window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+
+        // ── Active nav link
+        const path = window.location.pathname.toLowerCase();
+        if (path === '/' || path.includes('index')) document.getElementById('nav-home')?.classList.add('active');
+        if (path.includes('about'))    document.getElementById('nav-about')?.classList.add('active');
+        if (path.includes('projects')) document.getElementById('nav-projects')?.classList.add('active');
+
+        // ── Language toggle
+        function setLang(lang) {
+            document.body.classList.toggle('lang-fr', lang === 'fr');
+            document.getElementById('html-root').setAttribute('lang', lang);
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+            localStorage.setItem('lang', lang);
+        }
+        // Restore saved language
+        const saved = localStorage.getItem('lang');
+        if (saved === 'fr') setLang('fr');
+
+        // ── Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
