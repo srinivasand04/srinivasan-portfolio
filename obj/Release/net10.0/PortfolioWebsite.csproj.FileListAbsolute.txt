@@ -21,9 +21,7 @@ C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\rjsmcshtml.dswa.cache.j
 C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\scopedcss\bundle\PortfolioWebsite.styles.css
 C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\scopedcss\projectbundle\PortfolioWebsite.bundle.scp.css
-C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\compressed\u68ftvjbnp-{0}-hcb27akt92-hcb27akt92.gz
 C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\compressed\wihzu45pyj-{0}-61n19gt1b8-61n19gt1b8.gz
-C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\compressed\ernffkjssi-{0}-4ha3zvl18f-4ha3zvl18f.gz
 C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\compressed\kza726cpd5-{0}-bqjiyaj88i-bqjiyaj88i.gz
 C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\compressed\u13ex8r19q-{0}-c2jlpeoesf-c2jlpeoesf.gz
 C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\compressed\xqs4z9v5xc-{0}-erw9l3u2r3-erw9l3u2r3.gz
@@ -95,3 +93,13 @@ C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\refint\PortfolioWebsite
 C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\PortfolioWebsite.pdb
 C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\PortfolioWebsite.genruntimeconfig.cache
 C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\ref\PortfolioWebsite.dll
+C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\PortfolioWebsite.sourcelink.json
+C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\compressed\ernffkjssi-{0}-9kgijt8och-9kgijt8och.gz
+C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\compressed\izafl7qw57-{0}-9n3p705twj-9n3p705twj.gz
+C:\Users\Srinivasan\PortfolioWebsite\obj\Release\net10.0\compressed\u68ftvjbnp-{0}-cio16wwu72-cio16wwu72.gz
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\appsettings.Development.json
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\appsettings.json
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\PortfolioWebsite.deps.json
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\PortfolioWebsite.runtimeconfig.json
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\web.config
+C:\Users\Srinivasan\PortfolioWebsite\bin\Release\net10.0\publish\PortfolioWebsite.staticwebassets.endpoints.json

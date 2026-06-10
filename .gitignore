@@ -1,0 +1,22 @@
+## Build output
+bin/
+obj/
+publish/
+*.user
+*.suo
+
+## Publish artifacts
+publish.zip
+portfolio-prototype.html
+
+## IDE
+.vs/
+.vscode/
+*.DS_Store
+
+## ASP.NET
+appsettings.Development.json
+
+## Temp files
+Pages/_About_cv-strip-REPLACE-ONLY.cshtml
+IMPLEMENTATION-GUIDE.md

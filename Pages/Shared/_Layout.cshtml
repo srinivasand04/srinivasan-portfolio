@@ -1,10 +1,49 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" id="html-root">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] — Srinivasan Dhakshanamoorthy</title>
-    <meta name="description" content="Srinivasan Dhakshanamoorthy — .NET Developer, Data Engineer & AI Enthusiast. Based in Paris, seeking internship and full-time roles in France & Europe." />
+    @{
+        var pageTitle = ViewData["Title"] as string ?? "Portfolio";
+        var metaDescription = ViewData["Description"] as string ?? "Srinivasan Dhakshanamoorthy — Senior .NET Engineer and Data/AI Specialist with 8+ years of enterprise experience. Based in Paris and open to CDI, internship, part-time and freelance roles.";
+        var canonicalUrl = $"https://srinivasand.com{Context.Request.Path}";
+        var ogImage = "https://srinivasand.com/images/profile.jpeg";
+    }
+    <title>@pageTitle — Srinivasan Dhakshanamoorthy</title>
+    <meta name="description" content="@metaDescription" />
+    <meta name="author" content="Srinivasan Dhakshanamoorthy" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="@canonicalUrl" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@pageTitle — Srinivasan Dhakshanamoorthy" />
+    <meta property="og:description" content="@metaDescription" />
+    <meta property="og:url" content="@canonicalUrl" />
+    <meta property="og:image" content="@ogImage" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@pageTitle — Srinivasan Dhakshanamoorthy" />
+    <meta name="twitter:description" content="@metaDescription" />
+    <meta name="twitter:image" content="@ogImage" />
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Person",
+      "name": "Srinivasan Dhakshanamoorthy",
+      "jobTitle": ".NET Engineer and Data/AI Specialist",
+      "url": "https://srinivasand.com",
+      "image": "@ogImage",
+      "email": "mailto:Srinid0412@gmail.com",
+      "address": {
+        "@@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/srinivasand04",
+        "https://github.com/srinivasand04"
+      ],
+      "knowsAbout": ["ASP.NET Core", "C#", "Azure", "SQL Server", "Data Engineering", "Python", "NLP", "Machine Learning"]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -12,6 +51,7 @@
     <link rel="stylesheet" href="~/PortfolioWebsite.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- ── NAVBAR ── -->
     <nav class="site-nav" id="siteNav">
@@ -26,12 +66,16 @@
                 <span class="en-text">About</span>
                 <span class="fr-text">À propos</span>
             </a>
+            <a class="nav-link" asp-page="/Experience" id="nav-experience">
+                <span class="en-text">Experience</span>
+                <span class="fr-text">Expérience</span>
+            </a>
             <a class="nav-link" asp-page="/Projects" id="nav-projects">
                 <span class="en-text">Projects</span>
                 <span class="fr-text">Projets</span>
             </a>
 
-            <a class="nav-link nav-cta" asp-page="/About">
+            <a class="nav-link nav-cta" asp-page="/About" fragment="contact">
                 <span class="en-text">Hire Me</span>
                 <span class="fr-text">Me contacter</span>
             </a>
@@ -41,27 +85,130 @@
                 <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
                 <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
             </div>
+
+            <!-- Dark mode toggle -->
+            <button class="dark-toggle" id="darkToggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+                <span class="light-icon">🌙</span>
+                <span class="dark-icon">☀️</span>
+            </button>
+
+            <!-- Mobile hamburger -->
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- ── ANNOUNCE BAR ── -->
+    <div class="announce-bar">
+        <span class="ab-label">
+            <span class="en-text">OPEN TO</span>
+            <span class="fr-text">DISPONIBLE POUR</span>
+        </span>
+        <span class="ab-pill ab-pill-red">
+            <span class="en-text">Full-time (CDI)</span>
+            <span class="fr-text">CDI</span>
+        </span>
+        <span class="ab-sep">·</span>
+        <span class="ab-pill ab-pill-red">
+            <span class="en-text">Part-time</span>
+            <span class="fr-text">Mi-temps</span>
+        </span>
+        <span class="ab-sep">·</span>
+        <span class="ab-pill ab-pill-teal">
+            <span class="en-text">Internship (Stage)</span>
+            <span class="fr-text">Stage 6 mois</span>
+        </span>
+        <span class="ab-sep">·</span>
+        <span class="ab-pill ab-pill-gray">
+            <span class="en-text">Freelance / Contract</span>
+            <span class="fr-text">Freelance / Mission</span>
+        </span>
+        <span class="ab-sep">·</span>
+        <span class="ab-loc">
+            <span class="en-text">📍 Paris &amp; Remote · Available immediately</span>
+            <span class="fr-text">📍 Paris &amp; Remote · Disponible immédiatement</span>
+        </span>
+    </div>
+
     <!-- ── CONTENT ── -->
-    <main role="main">
+    <main role="main" id="main-content">
         @RenderBody()
     </main>
 
+    <!-- ── STICKY CTA ── -->
+    <a class="sticky-cta" asp-page="/About" fragment="contact">
+        <span class="sticky-dot"></span>
+        <span class="sticky-text">
+            <strong>
+                <span class="en-text">Available immediately</span>
+                <span class="fr-text">Disponible · Juin 2026</span>
+            </strong>
+            <span class="sticky-sub">
+                <span class="en-text">Hire me → Paris &amp; Europe</span>
+                <span class="fr-text">Me contacter → Paris &amp; Europe</span>
+            </span>
+        </span>
+        <span class="sticky-arrow">→</span>
+    </a>
+
     <!-- ── FOOTER ── -->
     <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-brand">Srinivasan<span>.</span></div>
-            <div class="footer-note">
-                <span class="en-text">Hosted on Azure · © @DateTime.Now.Year</span>
-                <span class="fr-text">Hébergé sur Azure · © @DateTime.Now.Year</span>
+        <div class="footer-main">
+
+            <!-- Brand + tagline -->
+            <div class="footer-col-brand">
+                <div class="footer-brand">Srinivasan<span>.</span></div>
+                <p class="footer-tagline">
+                    <span class="en-text">Senior .NET Engineer &amp; Data/AI Specialist · Based in Paris · Open to Europe.</span>
+                    <span class="fr-text">Ingénieur .NET Senior &amp; Data/IA · Basé à Paris · Disponible en Europe.</span>
+                </p>
             </div>
-            <div class="footer-links">
+
+            <!-- Quick nav -->
+            <nav class="footer-col-nav">
+                <h4><span class="en-text">Navigate</span><span class="fr-text">Navigation</span></h4>
+                <a asp-page="/Index"><span class="en-text">Home</span><span class="fr-text">Accueil</span></a>
                 <a asp-page="/About"><span class="en-text">About</span><span class="fr-text">À propos</span></a>
+                <a asp-page="/Experience"><span class="en-text">Experience</span><span class="fr-text">Expérience</span></a>
                 <a asp-page="/Projects"><span class="en-text">Projects</span><span class="fr-text">Projets</span></a>
-                <a href="https://linkedin.com/in/srinivasand04" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Srinivasand04" target="_blank">GitHub</a>
+                <a asp-page="/About" fragment="contact"><span class="en-text">Contact</span><span class="fr-text">Contact</span></a>
+            </nav>
+
+            <!-- Social links -->
+            <div class="footer-col-social">
+                <h4><span class="en-text">Connect</span><span class="fr-text">Me contacter</span></h4>
+                <div class="footer-social-list">
+                    <a href="https://linkedin.com/in/srinivasand04" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                        <span class="footer-social-icon-wrap">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                        </span>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/srinivasand04" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                        <span class="footer-social-icon-wrap">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        </span>
+                        GitHub
+                    </a>
+                    <a href="mailto:Srinid0412@@gmail.com" class="footer-social-item">
+                        <span class="footer-social-icon-wrap">✉️</span>
+                        Srinid0412@@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-inner">
+                <span class="footer-copy">
+                    <span class="en-text">Hosted on Azure · © @DateTime.Now.Year · Srinivasan Dhakshanamoorthy</span>
+                    <span class="fr-text">Hébergé sur Azure · © @DateTime.Now.Year · Srinivasan Dhakshanamoorthy</span>
+                </span>
+                <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                    ↑ <span class="en-text">Back to top</span><span class="fr-text">Haut de page</span>
+                </button>
             </div>
         </div>
     </footer>
@@ -71,15 +218,22 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     <script>
-        // ── Navbar scroll
+        // ── Navbar scroll shadow
         const nav = document.getElementById('siteNav');
         window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
 
         // ── Active nav link
         const path = window.location.pathname.toLowerCase();
-        if (path === '/' || path.includes('index')) document.getElementById('nav-home')?.classList.add('active');
-        if (path.includes('about'))    document.getElementById('nav-about')?.classList.add('active');
-        if (path.includes('projects')) document.getElementById('nav-projects')?.classList.add('active');
+        if (path === '/' || path.includes('index'))   document.getElementById('nav-home')?.classList.add('active');
+        if (path.includes('about'))                    document.getElementById('nav-about')?.classList.add('active');
+        if (path.includes('experience'))               document.getElementById('nav-experience')?.classList.add('active');
+        if (path.includes('projects'))                 document.getElementById('nav-projects')?.classList.add('active');
+
+        // ── Mobile toggle
+        const toggle = document.getElementById('navToggle');
+        if (toggle) {
+            toggle.addEventListener('click', () => nav.classList.toggle('mobile-open'));
+        }
 
         // ── Language toggle
         function setLang(lang) {
@@ -89,9 +243,19 @@
             document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
             localStorage.setItem('lang', lang);
         }
-        // Restore saved language
         const saved = localStorage.getItem('lang');
         if (saved === 'fr') setLang('fr');
+
+        // ── Dark mode toggle
+        const htmlRoot = document.getElementById('html-root');
+        const darkToggle = document.getElementById('darkToggle');
+        function setDark(on) {
+            htmlRoot.classList.toggle('dark', on);
+            localStorage.setItem('theme', on ? 'dark' : 'light');
+        }
+        if (darkToggle) darkToggle.addEventListener('click', () => setDark(!htmlRoot.classList.contains('dark')));
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') setDark(true);
 
         // ── Scroll reveal
         const observer = new IntersectionObserver(entries => {
@@ -103,3 +267,4 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

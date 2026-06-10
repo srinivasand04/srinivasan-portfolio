@@ -1,8 +1,48 @@
-﻿@page
+@page
 @model PrivacyModel
 @{
     ViewData["Title"] = "Privacy Policy";
+    ViewData["Description"] = "Privacy notice for Srinivasan Dhakshanamoorthy's portfolio website, including contact data, CV downloads, analytics, cookies, and external links.";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<section class="section privacy-page">
+    <div class="sec-label">
+        <span class="en-text">Privacy</span>
+        <span class="fr-text">Confidentialité</span>
+    </div>
+    <h1 class="sec-title">
+        <span class="en-text">Privacy <span>Policy</span></span>
+        <span class="fr-text">Politique de <span>confidentialité</span></span>
+    </h1>
+    <p class="sec-sub">
+        <span class="en-text">This portfolio is designed to share professional information, project work, and contact details with recruiters, hiring teams, and collaborators.</span>
+        <span class="fr-text">Ce portfolio présente des informations professionnelles, des projets et des coordonnées aux recruteurs, équipes de recrutement et collaborateurs.</span>
+    </p>
+
+    <div class="privacy-grid reveal">
+        <article class="privacy-card">
+            <h2>Information Displayed</h2>
+            <p>The site publishes professional profile details such as work history, education, skills, project summaries, public GitHub links, LinkedIn links, email addresses, phone number, location, and downloadable CV files.</p>
+        </article>
+        <article class="privacy-card">
+            <h2>Contact Data</h2>
+            <p>If you contact me by email, phone, LinkedIn, GitHub, or the Gmail compose helper, the information you choose to send is handled only for professional communication and follow-up.</p>
+        </article>
+        <article class="privacy-card">
+            <h2>Cookies And Local Storage</h2>
+            <p>The site stores only interface preferences in your browser, such as language and dark-mode choices. These preferences stay on your device and are not used for tracking.</p>
+        </article>
+        <article class="privacy-card">
+            <h2>External Services</h2>
+            <p>External links may open LinkedIn, GitHub, Gmail, Google Fonts, or downloadable files. Those services apply their own privacy policies once you leave this website.</p>
+        </article>
+        <article class="privacy-card">
+            <h2>Analytics</h2>
+            <p>No custom analytics or advertising trackers are implemented in this codebase. If hosting analytics are enabled later, this page should be updated before deployment.</p>
+        </article>
+        <article class="privacy-card">
+            <h2>Contact</h2>
+            <p>For privacy questions or data correction requests, contact <a href="mailto:Srinid0412@gmail.com">Srinid0412@gmail.com</a>.</p>
+        </article>
+    </div>
+</section>
