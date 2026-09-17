@@ -3,168 +3,602 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home — Srinivasan Dhakshanamoorthy</title>
-    <meta name="description" content="Srinivasan Dhakshanamoorthy — .NET Developer, Data Engineer & AI Enthusiast. Based in Paris, seeking internship and full-time roles in France & Europe." />
-    <link rel="icon" href="favicon.ico" />
+        <title>Home — Srinivasan Dhakshanamoorthy</title>
+    <meta name="description" content="Srinivasan Dhakshanamoorthy is a Paris-based .NET Engineer and Data/AI Specialist with 8+ years of enterprise experience across banking, logistics, cloud, ETL, and applied AI." />
+    <meta name="author" content="Srinivasan Dhakshanamoorthy" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://srinivasand.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home — Srinivasan Dhakshanamoorthy" />
+    <meta property="og:description" content="Srinivasan Dhakshanamoorthy is a Paris-based .NET Engineer and Data/AI Specialist with 8+ years of enterprise experience across banking, logistics, cloud, ETL, and applied AI." />
+    <meta property="og:url" content="https://srinivasand.com/" />
+    <meta property="og:image" content="https://srinivasand.com/images/profile.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Home — Srinivasan Dhakshanamoorthy" />
+    <meta name="twitter:description" content="Srinivasan Dhakshanamoorthy is a Paris-based .NET Engineer and Data/AI Specialist with 8+ years of enterprise experience across banking, logistics, cloud, ETL, and applied AI." />
+    <meta name="twitter:image" content="https://srinivasand.com/images/profile.jpeg" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Srinivasan Dhakshanamoorthy",
+      "jobTitle": ".NET Engineer and Data/AI Specialist",
+      "url": "https://srinivasand.com",
+      "image": "https://srinivasand.com/images/profile.jpeg",
+      "email": "mailto:Srinid0412@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/srinivasand04",
+        "https://github.com/srinivasand04"
+      ],
+      "knowsAbout": ["ASP.NET Core", "C#", "Azure", "SQL Server", "Data Engineering", "Python", "NLP", "Machine Learning"]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="lib/bootstrap.min.css" />
     <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
-<div class="bg-dots"></div>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- ── NAVBAR ── -->
     <nav class="site-nav" id="siteNav">
         <div class="nav-inner">
-            <a class="nav-brand" href="index.html">Srinivasan<i>.</i></a>
-            <a class="nav-link" href="index.html" id="nav-home"><span class="en-text">Home</span><span class="fr-text">Accueil</span></a>
-            <a class="nav-link" href="about.html" id="nav-about"><span class="en-text">About</span><span class="fr-text">À propos</span></a>
-            <a class="nav-link" href="experience.html" id="nav-experience"><span class="en-text">Experience</span><span class="fr-text">Expérience</span></a>
-            <a class="nav-link" href="projects.html" id="nav-projects"><span class="en-text">Projects</span><span class="fr-text">Projets</span></a>
-            <a class="nav-link nav-cta" href="about.html#contact"><span class="en-text">Hire Me</span><span class="fr-text">Me contacter</span></a>
+            <a class="nav-brand" href="index.html">Srinivasan<span>.</span></a>
+
+            <a class="nav-link" href="index.html" id="nav-home">
+                <span class="en-text">Home</span>
+                <span class="fr-text">Accueil</span>
+            </a>
+            <a class="nav-link" href="about.html" id="nav-about">
+                <span class="en-text">About</span>
+                <span class="fr-text">À propos</span>
+            </a>
+            <a class="nav-link" href="experience.html" id="nav-experience">
+                <span class="en-text">Experience</span>
+                <span class="fr-text">Expérience</span>
+            </a>
+            <a class="nav-link" href="projects.html" id="nav-projects">
+                <span class="en-text">Projects</span>
+                <span class="fr-text">Projets</span>
+            </a>
+
+            <a class="nav-link nav-cta" href="about.html#contact">
+                <span class="en-text">Hire Me</span>
+                <span class="fr-text">Me contacter</span>
+            </a>
+
+            <!-- Language toggle -->
             <div class="lang-toggle">
                 <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
                 <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
             </div>
+
+            <!-- Dark mode toggle -->
+            <button class="dark-toggle" id="darkToggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+                <span class="light-icon">🌙</span>
+                <span class="dark-icon">☀️</span>
+            </button>
+
+            <!-- Mobile hamburger -->
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- ── ANNOUNCE BAR ── -->
+    <div class="announce-bar">
+        <span class="ab-label">
+            <span class="en-text">OPEN TO</span>
+            <span class="fr-text">DISPONIBLE POUR</span>
+        </span>
+        <span class="ab-pill ab-pill-red">
+            <span class="en-text">Full-time (CDI)</span>
+            <span class="fr-text">CDI</span>
+        </span>
+        <span class="ab-sep">·</span>
+        <span class="ab-pill ab-pill-red">
+            <span class="en-text">Part-time</span>
+            <span class="fr-text">Mi-temps</span>
+        </span>
+        <span class="ab-sep">·</span>
+        <span class="ab-pill ab-pill-teal">
+            <span class="en-text">Internship (Stage)</span>
+            <span class="fr-text">Stage 6 mois</span>
+        </span>
+        <span class="ab-sep">·</span>
+        <span class="ab-pill ab-pill-gray">
+            <span class="en-text">Freelance / Contract</span>
+            <span class="fr-text">Freelance / Mission</span>
+        </span>
+        <span class="ab-sep">·</span>
+        <span class="ab-loc">
+            <span class="en-text">📍 Paris &amp; Remote · Available immediately</span>
+            <span class="fr-text">📍 Paris &amp; Remote · Disponible immédiatement</span>
+        </span>
+    </div>
+
     <!-- ── CONTENT ── -->
-    <main role="main">
+    <main role="main" id="main-content">
+        
+<div class="hero-bg"></div>
 
-    <!-- ── WORK MODE STRIP ── -->
-    <div class="work-mode-strip">
-        <span class="wms-label"><span class="en-text">Open to</span><span class="fr-text">Ouvert à</span></span>
-        <span class="wm-chip wm-fulltime"><span class="wm-dot"></span>Full-time (CDI)</span>
-        <span class="wms-sep">·</span>
-        <span class="wm-chip wm-parttime">Part-time</span>
-        <span class="wms-sep">·</span>
-        <span class="wm-chip wm-intern"><span class="en-text">Internship (Stage)</span><span class="fr-text">Stage</span></span>
-        <span class="wms-sep">·</span>
-        <span class="wm-chip wm-freelance">Freelance / Contract</span>
-        <span class="wms-location"><svg class="ic"><use href="icons.svg#i-pin"/></svg> Paris &amp; Remote · <span class="en-text">Available immediately</span><span class="fr-text">Disponible immédiatement</span></span>
-    </div>
 
-<!-- ══ HERO — BENTO GRID ══════════════════════════════════════ -->
-<div class="bento reveal">
+<section class="hero">
 
-    <div class="tile t-name">
-        <div class="eyebrow"><svg class="ic"><use href="icons.svg#i-pin"/></svg><span class="en-text">Available · Paris, France</span><span class="fr-text">Disponible · Paris, France</span></div>
-        <h1>
-            <span class="en-block">Backend engineer, now building <em>data &amp; AI systems</em>.</span>
-            <span class="fr-block">Ingénieur backend, aujourd'hui tourné vers <em>la data &amp; l'IA</em>.</span>
+    <div class="hero-glow"></div>
+
+
+    <div style="position:relative;z-index:2;">
+
+        <div class="avail-badge">
+            <span class="avail-dot"></span>
+            <span class="en-text">Available · Paris, France · All work modes</span>
+            <span class="fr-text">Disponible · Paris, France · Tous modes</span>
+        </div>
+
+        <p class="hero-greeting">Hello, I'm<span class="dot"> .</span></p>
+        <p class="hero-name">Srinivasan Dhakshanamoorthy</p>
+
+        <h1 class="hero-title hero-title-animate">
+            <span class="en-text">.NET Engineer &amp;<br>Data/AI Specialist</span>
+            <span class="fr-text">Ingénieur .NET &amp;<br>Data / IA</span>
         </h1>
-        <p>
-            <span class="en-text">8+ years shipping enterprise .NET platforms at Bank of America, Cognizant and LTI Mindtree — now completing an M.Sc. in Data Engineering &amp; AI at ESILV Paris.</span>
-            <span class="fr-text">8+ ans à livrer des plateformes .NET en entreprise chez Bank of America, Cognizant et LTI Mindtree — en Master Data Engineering &amp; IA à l'ESILV Paris.</span>
+
+        <div class="pivot-badge">
+            <span class="en-text">8+ yrs Backend Engineer → Data &amp; AI Engineer · Paris · Available now</span>
+            <span class="fr-text">8+ ans Ingénieur Backend → Data &amp; IA · Paris · Disponible</span>
+        </div>
+
+        <div class="fast-scan" aria-label="Recruiter summary">
+            <div class="fast-scan-item">
+                <span class="fast-scan-k">Status</span>
+                <span class="fast-scan-v">
+                    <span class="en-text">Available now</span>
+                    <span class="fr-text">Disponible</span>
+                </span>
+            </div>
+            <div class="fast-scan-item">
+                <span class="fast-scan-k">Location</span>
+                <span class="fast-scan-v">Paris / Remote</span>
+            </div>
+            <div class="fast-scan-item">
+                <span class="fast-scan-k">Roles</span>
+                <span class="fast-scan-v">.NET · Data · AI</span>
+            </div>
+            <div class="fast-scan-item">
+                <span class="fast-scan-k">Modes</span>
+                <span class="fast-scan-v">Stage · CDI · Freelance</span>
+            </div>
+            <div class="fast-scan-item">
+                <span class="fast-scan-k">Languages</span>
+                <span class="fast-scan-v">English C1 · French A2</span>
+            </div>
+        </div>
+
+
+        <div class="co-boxes">
+            <div class="co-box">
+                <div class="co-logo">🏦</div>
+                <div>
+                    <div class="co-name">Bank of America</div>
+                    <div class="co-meta">Feb 2022 – Sep 2025 · Chennai</div>
+                </div>
+            </div>
+            <div class="co-box">
+                <div class="co-logo">🔷</div>
+                <div>
+                    <div class="co-name">Cognizant</div>
+                    <div class="co-meta">May 2014 – Feb 2022 · Chennai</div>
+                </div>
+            </div>
+            <div class="co-box">
+                <div class="co-logo">💼</div>
+                <div>
+                    <div class="co-name">LTI Mindtree</div>
+                    <div class="co-meta">Jul 2017 – Jul 2019 · Bangalore</div>
+                </div>
+            </div>
+            <div class="co-box">
+                <div class="co-logo">🎓</div>
+                <div>
+                    <div class="co-name">ESILV Paris</div>
+                    <div class="co-meta">
+                        <span class="en-text">M.Sc. Data Engineering &amp; AI · 2025–2026</span>
+                        <span class="fr-text">Master Data Eng. &amp; IA · 2025–2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="skill-tags">
+            <span class="skill-tag tag-indigo">ASP.NET Core</span>
+            <span class="skill-tag tag-indigo">C#</span>
+            <span class="skill-tag tag-indigo">REST APIs</span>
+            <span class="skill-tag tag-indigo">SQL Server</span>
+            <span class="skill-tag tag-rose">Azure</span>
+            <span class="skill-tag tag-rose">Docker</span>
+            <span class="skill-tag tag-rose">CI/CD</span>
+            <span class="skill-tag tag-teal">Python</span>
+            <span class="skill-tag tag-teal">ETL</span>
+            <span class="skill-tag tag-teal">Pandas</span>
+            <span class="skill-tag tag-purple">BERT / NLP</span>
+            <span class="skill-tag tag-purple">LangChain</span>
+        </div>
+
+        <p class="hero-desc">
+            <span class="en-text">
+                Senior .NET Engineer with <strong>8+ years</strong> delivering enterprise-grade systems
+                across banking &amp; logistics at Bank of America and Cognizant — expert in
+                C#, ASP.NET Core, REST APIs, and Azure cloud. Now completing
+                <strong>M.Sc. Data Engineering &amp; AI at ESILV Paris (2026)</strong>.
+                Immediately available for .NET, Full Stack, or Data roles in Europe.
+            </span>
+            <span class="fr-text">
+                Ingénieur .NET Senior avec <strong>8+ ans</strong> chez Bank of America et Cognizant —
+                expert C#, ASP.NET Core, REST APIs et Azure. En Master Data &amp; IA à l'<strong>ESILV Paris (2026)</strong>.
+                Disponible immédiatement pour des rôles .NET, Full Stack ou Data en France &amp; Europe.
+            </span>
         </p>
-        <div class="btns">
-            <a class="btn-primary" href="projects.html"><span class="en-text">View projects</span><span class="fr-text">Voir mes projets</span> <svg class="ic"><use href="icons.svg#i-arrow-right"/></svg></a>
-            <a class="btn-ghost" href="about.html#contact"><svg class="ic"><use href="icons.svg#i-download"/></svg> <span class="en-text">Download CV</span><span class="fr-text">Télécharger le CV</span></a>
+
+        <div class="hero-btns">
+            <a class="btn-primary" href="projects.html">
+                <span class="en-text">View Projects →</span>
+                <span class="fr-text">Voir mes projets →</span>
+            </a>
+            <a class="btn-ghost" href="about.html">
+                <span class="en-text">About Me</span>
+                <span class="fr-text">À propos</span>
+            </a>
         </div>
     </div>
 
-    <div class="tile t-photo">
-        <img src="images/profile.jpg" alt="Srinivasan Dhakshanamoorthy" onerror="this.style.display='none';" />
-        <div class="ph">
-            <div class="badge"><span class="dot"></span> <span class="en-text">Available now</span><span class="fr-text">Disponible</span></div>
-            <strong>Srinivasan D.</strong>
-            <span>.NET · Data · AI</span>
+
+    <div class="hero-visual">
+        <div class="vis-wrap">
+
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+
+
+            <div class="photo-card">
+                <img src="images/profile.jpeg" alt="Srinivasan Dhakshanamoorthy" />
+                <div class="exp-badge">8+ yrs enterprise</div>
+            </div>
+
+
+            <div class="otw-ring">
+                <svg viewBox="0 0 50 50" width="50" height="50">
+                    <path id="otwPath" d="M 25,3 A 22,22 0 1,1 24.99,3" fill="none"/>
+                    <text font-family="Space Mono,monospace" font-size="5.5" fill="#C0392B" font-weight="700" letter-spacing="1.5">
+                        <textPath href="#otwPath">OPEN TO WORK • PARIS • 2026 •</textPath>
+                    </text>
+                </svg>
+                <div class="otw-center"></div>
+            </div>
+
+
+            <div class="skill-chip chip-1">
+                <div class="chip-inner">
+                    <div class="chip-icon" style="background:#EEF2FF;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#4F46E5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                        <span class="chip-label">.NET Backend</span>
+                        <span class="chip-sub">ASP.NET Core · C#</span>
+                    </div>
+                </div>
+                <div class="chip-bar"><div class="chip-fill" style="width:92%;background:#4F46E5;"></div></div>
+                <div class="chip-tooltip">
+                    <div class="tt-title">Backend Engineering</div>
+                    8+ years building enterprise APIs at Bank of America &amp; Cognizant. 500K+ daily transactions.
+                    <div class="tt-tags"><span class="tt-tag">ASP.NET Core</span><span class="tt-tag">C#</span><span class="tt-tag">EF Core</span><span class="tt-tag">CQRS</span></div>
+                    <div class="tt-stat">100K+ users · 40+ endpoints · 0 incidents</div>
+                </div>
+            </div>
+
+
+            <div class="skill-chip chip-2">
+                <div class="chip-inner">
+                    <div class="chip-icon" style="background:#EFF6FF;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                        <span class="chip-label">Azure Cloud</span>
+                        <span class="chip-sub">DevOps · Docker</span>
+                    </div>
+                </div>
+                <div class="chip-bar"><div class="chip-fill" style="width:85%;background:#2563EB;"></div></div>
+                <div class="chip-tooltip">
+                    <div class="tt-title">Cloud &amp; DevOps</div>
+                    Full Azure stack — App Services, Functions, DevOps CI/CD. Cut release cycles by 40%.
+                    <div class="tt-tags"><span class="tt-tag">Azure</span><span class="tt-tag">Docker</span><span class="tt-tag">GitHub Actions</span></div>
+                    <div class="tt-stat">Blue/green deployments · IIS · SonarQube</div>
+                </div>
+            </div>
+
+
+            <div class="skill-chip chip-3">
+                <div class="chip-inner">
+                    <div class="chip-icon" style="background:#F0FDF4;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="#16A34A" stroke-width="2"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" stroke="#16A34A" stroke-width="2"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke="#16A34A" stroke-width="2"/></svg>
+                    </div>
+                    <div>
+                        <span class="chip-label">Data Engineering</span>
+                        <span class="chip-sub">Python · SQL · ETL</span>
+                    </div>
+                </div>
+                <div class="chip-bar"><div class="chip-fill" style="width:80%;background:#16A34A;"></div></div>
+                <div class="chip-tooltip">
+                    <div class="tt-title">Data Engineering</div>
+                    SSIS pipelines, 3M+ records/day. M.Sc. Data Engineering &amp; AI at ESILV Paris (2026).
+                    <div class="tt-tags"><span class="tt-tag">Python</span><span class="tt-tag">Pandas</span><span class="tt-tag">Spark</span><span class="tt-tag">ETL</span></div>
+                    <div class="tt-stat">ESILV Paris · Graduating 2026</div>
+                </div>
+            </div>
+
+
+            <div class="skill-chip chip-4">
+                <div class="chip-inner">
+                    <div class="chip-icon" style="background:#FDF4FF;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z" stroke="#9333EA" stroke-width="2"/><path d="M9 21h6" stroke="#9333EA" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div>
+                        <span class="chip-label">AI &amp; NLP</span>
+                        <span class="chip-sub">BERT · LangChain</span>
+                    </div>
+                </div>
+                <div class="chip-bar"><div class="chip-fill" style="width:74%;background:#9333EA;"></div></div>
+                <div class="chip-tooltip">
+                    <div class="tt-title">AI &amp; NLP</div>
+                    Fine-tuned BERT for sentiment analysis. GenAI apps with LangChain + OpenAI RAG pipelines.
+                    <div class="tt-tags"><span class="tt-tag">BERT</span><span class="tt-tag">HuggingFace</span><span class="tt-tag">LangChain</span><span class="tt-tag">RAG</span></div>
+                    <div class="tt-stat">Computer Vision · LLMs · MLflow</div>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <div class="tile t-stat"><div class="num">8+</div><div class="lbl"><span class="en-text">Years enterprise experience</span><span class="fr-text">Ans d'expérience entreprise</span></div></div>
-    <div class="tile t-stat"><div class="num">500K</div><div class="lbl"><span class="en-text">Daily transactions at BoA</span><span class="fr-text">Transactions/jour chez BoA</span></div></div>
-
-    <div class="tile t-role">
-        <div class="co"><svg class="ic"><use href="icons.svg#i-building"/></svg>Bank of America</div>
-        <div class="co"><svg class="ic"><use href="icons.svg#i-building"/></svg>Cognizant</div>
-        <div class="co"><svg class="ic"><use href="icons.svg#i-grad"/></svg>ESILV Paris</div>
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+        <span class="scroll-indicator-text">scroll</span>
+        <div class="scroll-indicator-line"></div>
     </div>
 
-    <div class="tile t-wide t-tech">
-        <span>ASP.NET Core</span><span>C#</span><span>Azure</span><span>Docker</span><span>Python</span><span>SQL Server</span><span>BERT / NLP</span><span>LangChain</span><span>OAuth 2.0</span><span>GitHub Actions</span>
-    </div>
-</div>
+</section>
 
-<!-- ══ QUICK FACTS ═══════════════════════════════════════════ -->
-<div class="facts-row reveal">
-    <div class="fact-tile"><span><span class="en-text">Status</span><span class="fr-text">Statut</span></span><b><span class="en-text">Available now</span><span class="fr-text">Disponible</span></b></div>
-    <div class="fact-tile"><span><span class="en-text">Location</span><span class="fr-text">Lieu</span></span><b>Paris / Remote</b></div>
-    <div class="fact-tile"><span><span class="en-text">Roles</span><span class="fr-text">Rôles</span></span><b>.NET · Data · AI</b></div>
-    <div class="fact-tile"><span><span class="en-text">Modes</span><span class="fr-text">Contrats</span></span><b>Stage · CDI · Freelance</b></div>
-    <div class="fact-tile"><span><span class="en-text">Languages</span><span class="fr-text">Langues</span></span><b>English C1 · French A2</b></div>
-</div>
 
-<!-- ══ TICKER ════════════════════════════════════════════════ -->
 <div class="skills-ticker">
     <div class="ticker-track">
-        <div class="ticker-item"><span class="ticker-dot"></span>C#</div>
+                <div class="ticker-item"><span class="ticker-dot"></span>C#</div>
         <div class="ticker-item"><span class="ticker-dot"></span>ASP.NET Core</div>
-        <div class="ticker-item"><span class="ticker-dot"></span>React.js</div>
-        <div class="ticker-item"><span class="ticker-dot"></span>TypeScript</div>
-        <div class="ticker-item"><span class="ticker-dot"></span>Azure</div>
         <div class="ticker-item"><span class="ticker-dot"></span>Python</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Azure</div>
         <div class="ticker-item"><span class="ticker-dot"></span>SQL Server</div>
         <div class="ticker-item"><span class="ticker-dot"></span>BERT / NLP</div>
         <div class="ticker-item"><span class="ticker-dot"></span>Docker</div>
         <div class="ticker-item"><span class="ticker-dot"></span>Entity Framework</div>
         <div class="ticker-item"><span class="ticker-dot"></span>OAuth 2.0</div>
-        <div class="ticker-item"><span class="ticker-dot"></span>JWT</div>
         <div class="ticker-item"><span class="ticker-dot"></span>LangChain</div>
-        <div class="ticker-item"><span class="ticker-dot"></span>GitHub Actions</div>
         <div class="ticker-item"><span class="ticker-dot"></span>Pandas</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Spark</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>GitHub Actions</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>MLflow</div>
         <div class="ticker-item"><span class="ticker-dot"></span>Scikit-learn</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>LTI Mindtree</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Bank of America</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Cognizant</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>ESILV Paris</div>
         <div class="ticker-item"><span class="ticker-dot"></span>C#</div>
         <div class="ticker-item"><span class="ticker-dot"></span>ASP.NET Core</div>
-        <div class="ticker-item"><span class="ticker-dot"></span>React.js</div>
-        <div class="ticker-item"><span class="ticker-dot"></span>TypeScript</div>
-        <div class="ticker-item"><span class="ticker-dot"></span>Azure</div>
         <div class="ticker-item"><span class="ticker-dot"></span>Python</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Azure</div>
         <div class="ticker-item"><span class="ticker-dot"></span>SQL Server</div>
         <div class="ticker-item"><span class="ticker-dot"></span>BERT / NLP</div>
         <div class="ticker-item"><span class="ticker-dot"></span>Docker</div>
         <div class="ticker-item"><span class="ticker-dot"></span>Entity Framework</div>
         <div class="ticker-item"><span class="ticker-dot"></span>OAuth 2.0</div>
-        <div class="ticker-item"><span class="ticker-dot"></span>JWT</div>
         <div class="ticker-item"><span class="ticker-dot"></span>LangChain</div>
-        <div class="ticker-item"><span class="ticker-dot"></span>GitHub Actions</div>
         <div class="ticker-item"><span class="ticker-dot"></span>Pandas</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Spark</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>GitHub Actions</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>MLflow</div>
         <div class="ticker-item"><span class="ticker-dot"></span>Scikit-learn</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>LTI Mindtree</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Bank of America</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>Cognizant</div>
+        <div class="ticker-item"><span class="ticker-dot"></span>ESILV Paris</div>
     </div>
 </div>
 
-<!-- ══ STATS ══════════════════════════════════════════════════ -->
+
 <div class="stats-row reveal">
-    <div class="stat-card"><span class="stat-num">8+</span><span class="stat-lbl"><span class="en-text">Years Enterprise<br>Experience</span><span class="fr-text">Ans d'expérience<br>entreprise</span></span></div>
-    <div class="stat-card"><span class="stat-num">BoA</span><span class="stat-lbl"><span class="en-text">Senior Tech Lead<br>Bank of America</span><span class="fr-text">Tech Lead Senior<br>Bank of America</span></span></div>
-    <div class="stat-card"><span class="stat-num">ESILV</span><span class="stat-lbl"><span class="en-text">M.Sc. Data Eng &amp; AI<br>Paris · 2026</span><span class="fr-text">Master Data Eng &amp; IA<br>Paris · 2026</span></span></div>
-    <div class="stat-card"><span class="stat-num">10+</span><span class="stat-lbl"><span class="en-text">AI / ML &amp; Cloud<br>Projects Built</span><span class="fr-text">Projets IA / ML<br>&amp; Cloud réalisés</span></span></div>
+    <div class="stat-card">
+        <span class="stat-num">8+</span>
+        <span class="stat-lbl">
+            <span class="en-text">Years Enterprise<br>Experience</span>
+            <span class="fr-text">Ans d'expérience<br>entreprise</span>
+        </span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-num" style="color:#E31837;">BoA</span>
+        <span class="stat-lbl">
+            <span class="en-text"><strong>Bank of America</strong><br>Senior Tech Lead</span>
+            <span class="fr-text"><strong>Bank of America</strong><br>Tech Lead Senior</span>
+        </span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-num" style="color:#0033A0;">CGN</span>
+        <span class="stat-lbl">
+            <span class="en-text"><strong>Cognizant</strong><br>Senior Associate</span>
+            <span class="fr-text"><strong>Cognizant</strong><br>Senior Associate</span>
+        </span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-num" style="color:#007A4D;">LTI</span>
+        <span class="stat-lbl">
+            <span class="en-text"><strong>LTI Mindtree</strong><br>Senior Engineer</span>
+            <span class="fr-text"><strong>LTI Mindtree</strong><br>Ingénieur Senior</span>
+        </span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-num">ESILV</span>
+        <span class="stat-lbl">
+            <span class="en-text">M.Sc. Data Eng &amp; AI<br>Paris · 2026</span>
+            <span class="fr-text">Master Data Eng &amp; IA<br>Paris · 2026</span>
+        </span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-num" style="font-size:1rem;">→ AI</span>
+        <span class="stat-lbl">
+            <span class="en-text">Pivoting to<br>Data / AI &amp; Cloud</span>
+            <span class="fr-text">Reconversion<br>Data / IA &amp; Cloud</span>
+        </span>
+    </div>
 </div>
 
-<div class="divider" style="margin-top:24px;"></div>
-
-<div style="text-align:center;padding:32px 5%;">
-    <a class="btn-primary reveal" href="about.html"><span class="en-text">Know More About Me</span><span class="fr-text">En savoir plus sur moi</span> <svg class="ic"><use href="icons.svg#i-arrow-right"/></svg></a>
-</div>
+<div class="divider" style="margin-top:0;"></div>
 
     </main>
 
+    <!-- ── STICKY CTA ── -->
+    <a class="sticky-cta" href="about.html#contact">
+        <span class="sticky-dot"></span>
+        <span class="sticky-text">
+            <strong>
+                <span class="en-text">Available immediately</span>
+                <span class="fr-text">Disponible · Juin 2026</span>
+            </strong>
+            <span class="sticky-sub">
+                <span class="en-text">Hire me → Paris &amp; Europe</span>
+                <span class="fr-text">Me contacter → Paris &amp; Europe</span>
+            </span>
+        </span>
+        <span class="sticky-arrow">→</span>
+    </a>
+
     <!-- ── FOOTER ── -->
     <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-brand">Srinivasan<i>.</i></div>
-            <div class="footer-note"><span class="en-text">Hosted on Vercel · © <span class="year">2026</span></span><span class="fr-text">Hébergé sur Vercel · © <span class="year">2026</span></span></div>
-            <div class="footer-links">
+        <div class="footer-main">
+
+            <!-- Brand + tagline -->
+            <div class="footer-col-brand">
+                <div class="footer-brand">Srinivasan<span>.</span></div>
+                <p class="footer-tagline">
+                    <span class="en-text">Senior .NET Engineer &amp; Data/AI Specialist · Based in Paris · Open to Europe.</span>
+                    <span class="fr-text">Ingénieur .NET Senior &amp; Data/IA · Basé à Paris · Disponible en Europe.</span>
+                </p>
+            </div>
+
+            <!-- Quick nav -->
+            <nav class="footer-col-nav">
+                <h4><span class="en-text">Navigate</span><span class="fr-text">Navigation</span></h4>
+                <a href="index.html"><span class="en-text">Home</span><span class="fr-text">Accueil</span></a>
                 <a href="about.html"><span class="en-text">About</span><span class="fr-text">À propos</span></a>
                 <a href="experience.html"><span class="en-text">Experience</span><span class="fr-text">Expérience</span></a>
                 <a href="projects.html"><span class="en-text">Projects</span><span class="fr-text">Projets</span></a>
-                <a href="https://linkedin.com/in/srinivasand04" target="_blank"><svg class="ic"><use href="icons.svg#i-linkedin"/></svg>LinkedIn</a>
-                <a href="https://github.com/srinivasand04" target="_blank"><svg class="ic"><use href="icons.svg#i-github"/></svg>GitHub</a>
+                <a href="about.html#contact"><span class="en-text">Contact</span><span class="fr-text">Contact</span></a>
+            </nav>
+
+            <!-- Social links -->
+            <div class="footer-col-social">
+                <h4><span class="en-text">Connect</span><span class="fr-text">Me contacter</span></h4>
+                <div class="footer-social-list">
+                    <a href="https://linkedin.com/in/srinivasand04" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                        <span class="footer-social-icon-wrap">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                        </span>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/srinivasand04" target="_blank" rel="noopener noreferrer" class="footer-social-item">
+                        <span class="footer-social-icon-wrap">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        </span>
+                        GitHub
+                    </a>
+                    <a href="mailto:Srinid0412@gmail.com" class="footer-social-item">
+                        <span class="footer-social-icon-wrap">✉️</span>
+                        Srinid0412@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-inner">
+                <span class="footer-copy">
+                    <span class="en-text">Hosted on Vercel · © <span class="cur-year">2026</span> · Srinivasan Dhakshanamoorthy</span>
+                    <span class="fr-text">Hébergé sur Vercel · © <span class="cur-year">2026</span> · Srinivasan Dhakshanamoorthy</span>
+                </span>
+                <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                    ↑ <span class="en-text">Back to top</span><span class="fr-text">Haut de page</span>
+                </button>
             </div>
         </div>
     </footer>
 
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.bundle.min.js"></script>
     <script src="js/site.js"></script>
+
+    <script>
+        // ── Navbar scroll shadow
+        const nav = document.getElementById('siteNav');
+        window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+
+        // ── Active nav link
+        const path = window.location.pathname.toLowerCase();
+        if (path === '/' || path.includes('index'))   document.getElementById('nav-home')?.classList.add('active');
+        if (path.includes('about'))                    document.getElementById('nav-about')?.classList.add('active');
+        if (path.includes('experience'))               document.getElementById('nav-experience')?.classList.add('active');
+        if (path.includes('projects'))                 document.getElementById('nav-projects')?.classList.add('active');
+
+        // ── Mobile toggle
+        const toggle = document.getElementById('navToggle');
+        if (toggle) {
+            toggle.addEventListener('click', () => nav.classList.toggle('mobile-open'));
+        }
+
+        // ── Language toggle
+        function setLang(lang) {
+            document.body.classList.toggle('lang-fr', lang === 'fr');
+            document.getElementById('html-root').setAttribute('lang', lang);
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+            localStorage.setItem('lang', lang);
+        }
+        const saved = localStorage.getItem('lang');
+        if (saved === 'fr') setLang('fr');
+
+        // ── Dark mode toggle
+        const htmlRoot = document.getElementById('html-root');
+        const darkToggle = document.getElementById('darkToggle');
+        function setDark(on) {
+            htmlRoot.classList.toggle('dark', on);
+            localStorage.setItem('theme', on ? 'dark' : 'light');
+        }
+        if (darkToggle) darkToggle.addEventListener('click', () => setDark(!htmlRoot.classList.contains('dark')));
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') setDark(true);
+
+        // ── Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+    
+    <script>document.querySelectorAll('.cur-year').forEach(e=>e.textContent=new Date().getFullYear());</script>
 </body>
 </html>
+
