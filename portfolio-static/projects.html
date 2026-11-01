@@ -4,25 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Projects — Srinivasan Dhakshanamoorthy</title>
-    <meta name="description" content="Project portfolio for Srinivasan Dhakshanamoorthy, covering enterprise .NET systems, cloud automation, data engineering, big data, NLP, MLOps, and computer vision." />
+    <meta name="description" content="AI projects by Srinivasan Dhakshanamoorthy: LLM incident intelligence with guardrails, GNN research on football tracking data, speech AI, MLOps, NLP and computer vision, plus enterprise .NET systems." />
     <meta name="author" content="Srinivasan Dhakshanamoorthy" />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://srinivasand.com/projects" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Projects — Srinivasan Dhakshanamoorthy" />
-    <meta property="og:description" content="Project portfolio for Srinivasan Dhakshanamoorthy, covering enterprise .NET systems, cloud automation, data engineering, big data, NLP, MLOps, and computer vision." />
+    <meta property="og:description" content="AI projects by Srinivasan Dhakshanamoorthy: LLM incident intelligence with guardrails, GNN research on football tracking data, speech AI, MLOps, NLP and computer vision, plus enterprise .NET systems." />
     <meta property="og:url" content="https://srinivasand.com/projects" />
     <meta property="og:image" content="https://srinivasand.com/images/profile.jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Projects — Srinivasan Dhakshanamoorthy" />
-    <meta name="twitter:description" content="Project portfolio for Srinivasan Dhakshanamoorthy, covering enterprise .NET systems, cloud automation, data engineering, big data, NLP, MLOps, and computer vision." />
+    <meta name="twitter:description" content="AI projects by Srinivasan Dhakshanamoorthy: LLM incident intelligence with guardrails, GNN research on football tracking data, speech AI, MLOps, NLP and computer vision, plus enterprise .NET systems." />
     <meta name="twitter:image" content="https://srinivasand.com/images/profile.jpeg" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Srinivasan Dhakshanamoorthy",
-      "jobTitle": ".NET Engineer and Data/AI Specialist",
+      "jobTitle": "AI Engineer — LLM, Agentic AI and AI Backend",
       "url": "https://srinivasand.com",
       "image": "https://srinivasand.com/images/profile.jpeg",
       "email": "mailto:Srinid0412@gmail.com",
@@ -35,7 +35,7 @@
         "https://linkedin.com/in/srinivasand04",
         "https://github.com/srinivasand04"
       ],
-      "knowsAbout": ["ASP.NET Core", "C#", "Azure", "SQL Server", "Data Engineering", "Python", "NLP", "Machine Learning"]
+      "knowsAbout": ["Large Language Models", "Agentic AI", "Claude API", "Graph Neural Networks", "PyTorch", "NLP", "MLOps", "FastAPI", "Python", "PostgreSQL", "ASP.NET Core", "C#", "Azure"]
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -142,6 +142,13 @@
 .project-card.professional { border-top:3px solid var(--accent); }
 .project-card.academic { border-top:3px solid #2563EB; }
 
+.project-card.ai { border-top:3px solid #7c3aed; }
+.project-card.sw { border-top:3px solid #0891b2; }
+.badge-wip { background:rgba(234,88,12,0.08); color:#ea580c; border:1px solid rgba(234,88,12,0.25); }
+.dot-amber { background:#f59e0b; box-shadow:0 0 0 3px rgba(245,158,11,0.2); }
+.proj-cat-sub { font-size:0.8rem; color:var(--text3); margin:-10px 0 22px; font-style:italic; }
+.proj-desc strong { color:var(--text); }
+@media (max-width: 420px) { .projects-grid { grid-template-columns:1fr; } }
 .project-banner { height:130px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
 
 .project-body { padding:20px 22px 16px; flex:1; display:flex; flex-direction:column; }
@@ -189,41 +196,42 @@
 
 <section class="section">
     <div class="sec-label"><span class="en-text">My Work</span><span class="fr-text">Mes réalisations</span></div>
-    <h1 class="sec-title"><span class="en-text">Projects &amp; <span>Builds</span></span><span class="fr-text">Projets &amp; <span>Réalisations</span></span></h1>
-    <p class="sec-sub"><span class="en-text">Enterprise systems from BoA &amp; Cognizant, plus open-source ML/AI/Data projects on GitHub.</span><span class="fr-text">Systèmes entreprise BoA &amp; Cognizant, et projets ML/IA/Data open-source sur GitHub.</span></p>
+    <h1 class="sec-title"><span class="en-text">AI Projects &amp; <span>Builds</span></span><span class="fr-text">Projets IA &amp; <span>Réalisations</span></span></h1>
+    <p class="sec-sub"><span class="en-text">LLM, agentic, GNN and MLOps projects on GitHub — newest first — plus enterprise systems from Bank of America, Cognizant and LTI Mindtree.</span><span class="fr-text">Projets LLM, agents IA, GNN et MLOps sur GitHub — du plus récent au plus ancien — et systèmes entreprise chez Bank of America, Cognizant et LTI Mindtree.</span></p>
 
     <div class="proj-filter">
-        <button class="pf-btn active" onclick="filterProj('all',this)">All Projects</button>
-        <button class="pf-btn" onclick="filterProj('professional',this)">Professional</button>
-        <button class="pf-btn" onclick="filterProj('academic',this)">Academic / GitHub</button>
+        <button class="pf-btn active" onclick="filterProj('all',this)"><span class="en-text">All Projects</span><span class="fr-text">Tous</span></button>
+        <button class="pf-btn" onclick="filterProj('ai',this)"><span class="en-text">AI &amp; ML</span><span class="fr-text">IA &amp; ML</span></button>
+        <button class="pf-btn" onclick="filterProj('software',this)"><span class="en-text">Software &amp; Web</span><span class="fr-text">Logiciel &amp; Web</span></button>
+        <button class="pf-btn" onclick="filterProj('professional',this)"><span class="en-text">Enterprise</span><span class="fr-text">Entreprise</span></button>
     </div>
 
     <div class="case-grid reveal" aria-label="Featured case studies">
         <article class="case-card">
-            <div class="case-label">Case Study · Banking</div>
-            <div class="case-title">Workflow automation for 100K+ internal users</div>
+            <div class="case-label">Case Study · LLM &amp; Agentic AI · In progress</div>
+            <div class="case-title">BankOps AI — trustworthy AI for banking incidents</div>
             <div class="case-flow">
-                <div><strong>Problem</strong><span>Manual task allocation, slow reporting, and sensitive access rules across banking operations.</span></div>
-                <div><strong>Build</strong><span>ASP.NET Core APIs, SQL Server, OAuth 2.0/JWT/RBAC, Splunk dashboards, Azure DevOps and Jenkins deployment pipeline.</span></div>
-                <div><strong>Impact</strong><span>40+ secured endpoints, 500K+ daily transactions, 30-40% less manual reporting, and 40% faster release cycles.</span></div>
+                <div><strong>Problem</strong><span>AI help for IT incident investigation is only useful if every claim is traceable and a human approves it.</span></div>
+                <div><strong>Build</strong><span>FastAPI + PostgreSQL 17, Claude or local Qwen3 (Ollama) behind one interface, guardrails that split cited facts from hypotheses, human review gate.</span></div>
+                <div><strong>Outcome</strong><span>Phases 1–5 of 8 done, 118 automated tests. Next: LangGraph supervisor with 5 specialist agents.</span></div>
             </div>
         </article>
         <article class="case-card">
-            <div class="case-label">Case Study · Data Engineering</div>
-            <div class="case-title">Enterprise ETL and reporting pipelines</div>
+            <div class="case-label">Case Study · GNN Research · DVRC</div>
+            <div class="case-title">Dynamic Tactical AI on real tracking data</div>
             <div class="case-flow">
-                <div><strong>Problem</strong><span>Large reporting workloads and multi-system data movement for banking, logistics, and construction platforms.</span></div>
-                <div><strong>Build</strong><span>SSIS/SSRS, SQL Server stored procedures, Web API/WCF integrations, batch processing, and monitoring workflows.</span></div>
-                <div><strong>Impact</strong><span>Millions of records processed daily, reporting latency reduced by 2 business days, and BI runtime improved by 35%.</span></div>
+                <div><strong>Problem</strong><span>Read football tactics from player tracking data and judge which pass is best.</span></div>
+                <div><strong>Build</strong><span>7 real DFL matches + 36 simulated games, Key States, ball-owner pass graph, GNN + GRU, leave-one-match-out evaluation.</span></div>
+                <div><strong>Outcome</strong><span>Pass-arrival AUC 0.84 vs 0.62 baseline; real receiver ranked first 45% vs 27% for nearest teammate.</span></div>
             </div>
         </article>
         <article class="case-card">
-            <div class="case-label">Case Study · AI / Big Data</div>
-            <div class="case-title">Academic AI systems with production-style patterns</div>
+            <div class="case-label">Case Study · M.Sc. Thesis</div>
+            <div class="case-title">SQL → NoSQL migration with graph neural networks</div>
             <div class="case-flow">
-                <div><strong>Problem</strong><span>Turn ESILV coursework into practical, recruiter-readable systems with clear data flow and measurable evaluation.</span></div>
-                <div><strong>Build</strong><span>Kafka, PySpark, Hadoop/HDFS, Power BI, BERT, Scikit-learn, MLflow, SHAP, TensorFlow/Keras, and PyTorch notebooks.</span></div>
-                <div><strong>Impact</strong><span>Public GitHub evidence for data pipelines, NLP, MLOps, deep learning, and computer vision work.</span></div>
+                <div><strong>Problem</strong><span>Embed, reference or denormalize? Migration design and cloud choice are usually manual.</span></div>
+                <div><strong>Build</strong><span>Schema graph of the 9-table Olist dataset, GCN / GAT classifier, LSTM workload forecaster, XGBoost cost model with SHAP, MLflow.</span></div>
+                <div><strong>Outcome</strong><span>GAT 98.0% validation accuracy; cost model average R² 0.973 across 4 cloud providers.</span></div>
             </div>
         </article>
     </div>
@@ -231,14 +239,717 @@
     <div class="evidence-strip reveal">
         <div class="evidence-copy">
             <strong>Open-source evidence</strong>
-            <span>Public repositories are linked where code can be shared. Enterprise projects stay confidential, but include architecture, responsibilities, and impact.</span>
+            <span>Every GitHub card links to its repository, and the numbers come from each project's README. Enterprise projects stay confidential, but include architecture, responsibilities, and impact.</span>
         </div>
         <div class="evidence-links">
             <a class="evidence-link" href="https://github.com/srinivasand04" target="_blank" rel="noopener noreferrer">GitHub Profile →</a>
-            <a class="evidence-link" href="https://github.com/srinivasand04/tacticai-lite" target="_blank" rel="noopener noreferrer">GNN Project →</a>
-            <a class="evidence-link" href="https://github.com/srinivasand04/BigData_Project" target="_blank" rel="noopener noreferrer">Big Data →</a>
-            <a class="evidence-link" href="https://github.com/srinivasand04/employee-attrition-MLOPS" target="_blank" rel="noopener noreferrer">MLOps →</a>
+            <a class="evidence-link" href="https://github.com/srinivasand04/dynamic-tactical-ai-football" target="_blank" rel="noopener noreferrer">Tactical AI →</a>
+            <a class="evidence-link" href="https://github.com/srinivasand04/sql-to-nosql-migration-framework" target="_blank" rel="noopener noreferrer">Thesis →</a>
+            <a class="evidence-link" href="https://github.com/srinivasand04/voiceops-ai" target="_blank" rel="noopener noreferrer">VoiceOps AI →</a>
         </div>
+    </div>
+
+
+    <h3 class="proj-cat-label" id="cat-gh">GitHub Projects — newest first</h3>
+    <p class="proj-cat-sub" id="cat-gh-sub">M.Sc. Data Engineering &amp; AI — ESILV Paris (2025–2026), DVRC research internship, freelance and personal work</p>
+    <div class="projects-grid">
+
+        <!-- BankOps AI — Incident Intelligence for Banking IT -->
+        <div class="project-card ai reveal" data-cat="ai">
+            <div class="project-banner" style="background:linear-gradient(135deg,#0f1424,#1a2238);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="BankOps AI · Incident Intelligence · In progress">
+                    <rect width="330" height="130" fill="#0f1424"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#1a2238" stroke="#3b82f6" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#93c5fd" text-anchor="middle">Incidents</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#5b9df7" text-anchor="middle">SLA · RCA</text>
+                    <text x="56" y="81" font-family="monospace" font-size="5.8" fill="#3b82f6" text-anchor="middle">CAPA</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#3b82f6" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#3b82f6"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#1a2238" stroke="#a855f7" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#e9d5ff" text-anchor="middle">Claude / Ollama</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#c084fc" text-anchor="middle">Cited facts</text>
+                    <text x="164" y="81" font-family="monospace" font-size="5.8" fill="#a855f7" text-anchor="middle">vs hypotheses</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#a855f7" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#a855f7"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#1a2238" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#86efac" text-anchor="middle">Human review</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">gate</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#2a3a5a" text-anchor="middle">BankOps AI · Incident Intelligence · In progress</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-wip">IN PROGRESS</span>
+                    <span class="proj-badge badge-aca">LLM · AGENTIC AI</span>
+                    <span class="proj-company">srinivasand04/bankops-ai · Oct 2026</span>
+                </div>
+                <div class="proj-title">BankOps AI — Incident Intelligence for Banking IT</div>
+                <div class="proj-desc"><strong>Problem:</strong> Banking technology teams must investigate IT incidents and operational risk quickly, but any AI answer has to be traceable to evidence and checked by a human before anyone acts on it.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'bankops-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'bankops-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'bankops-o')">Outcome</div>
+                </div>
+                <div id="bankops-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>FastAPI + PostgreSQL 17 modular monolith: incident lifecycle state machine, SLA engine, root-cause analysis with human-confirmed causes, and CAPA tracking</li>
+                    <li>Analytics API for MTTR / MTTA, SLA compliance, trends and repeated incidents</li>
+                    <li>Data-ingestion pipeline with 3-layer validation and source tagging for every record</li>
+                    <li>AI analysis behind one provider interface: Claude (structured outputs) or a free local model (Qwen3 8B via Ollama)</li>
+                    <li>Guardrails keep cited facts apart from hypotheses; a human review gate approves every AI finding</li>
+                    <li>Next: LangGraph supervisor + 5 specialist agents, full React dashboard, Rabobank BPI Challenge 2014 dataset import</li>
+                </ul></div>
+                <div id="bankops-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-green">FastAPI</span><span class="tech-pill tp-purple">Claude API</span><span class="tech-pill tp-purple">Ollama · Qwen3</span><span class="tech-pill tp-purple">LangGraph (next)</span><span class="tech-pill tp-blue">PostgreSQL 17</span><span class="tech-pill tp-blue">pgvector</span><span class="tech-pill tp-blue">SQLAlchemy 2</span><span class="tech-pill">Alembic</span><span class="tech-pill tp-teal">React</span><span class="tech-pill tp-teal">TypeScript</span><span class="tech-pill tp-teal">Tailwind</span><span class="tech-pill tp-orange">Docker Compose</span><span class="tech-pill">pytest</span>
+                </div></div>
+                <div id="bankops-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">118 automated tests</span><span class="impact-pill">Phases 1–5 of 8 done</span><span class="impact-pill">2 LLM providers, 1 interface</span><span class="impact-pill">Human-in-the-loop review</span><span class="impact-pill">Synthetic data only</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-amber"></div>In progress · Phase 6 of 8</div>
+                <a class="project-link" href="https://github.com/srinivasand04/bankops-ai" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
+        <!-- Dynamic Tactical AI — Football Tracking Data -->
+        <div class="project-card ai reveal" data-cat="ai">
+            <div class="project-banner" style="background:linear-gradient(135deg,#0d0f1a,#1a1330);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="Dynamic Tactical AI · DVRC / ESILV · 2026">
+                    <rect width="330" height="130" fill="#0d0f1a"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#1a1330" stroke="#22d3ee" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#67e8f9" text-anchor="middle">DFL tracking</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">+ GRF sim</text>
+                    <text x="56" y="81" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">10 fps</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#22d3ee" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#22d3ee"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#1a1330" stroke="#a855f7" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#e9d5ff" text-anchor="middle">Key States</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#c084fc" text-anchor="middle">GNN + GRU</text>
+                    <text x="164" y="81" font-family="monospace" font-size="5.8" fill="#a855f7" text-anchor="middle">pass graph</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#a855f7" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#a855f7"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#1a1330" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#86efac" text-anchor="middle">Pass AUC</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">0.84</text>
+                    <text x="273" y="81" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">unseen matches</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#4c1d95" text-anchor="middle">Dynamic Tactical AI · DVRC / ESILV · 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-wip">IN PROGRESS</span>
+                    <span class="proj-badge badge-aca">GNN · RESEARCH</span>
+                    <span class="proj-company">srinivasand04/dynamic-tactical-ai-football · Oct 2026</span>
+                </div>
+                <div class="proj-title">Dynamic Tactical AI — Football Tracking Data</div>
+                <div class="proj-desc"><strong>Problem:</strong> Can a model read tactics from real match tracking data — where players will move, who will receive the ball, and which pass gives the best chance?</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'dta-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'dta-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'dta-o')">Outcome</div>
+                </div>
+                <div id="dta-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>Put 7 real DFL / Sportec matches and 36 simulated Google Research Football games into one common format (105 × 68 m, 10 frames/s)</li>
+                    <li>Extracted Key States — frames where play moved by at least 3 m — and grouped them into sequences</li>
+                    <li>Built radius graphs and a ball-owner pass graph; trained a GNN + GRU over the Key States</li>
+                    <li>Pass models for arrival probability and expected gain; all numbers measured leave-one-match-out with 95% intervals</li>
+                    <li>Five-layer design; tactics layer is a first version and the simulator agents are not started yet</li>
+                    <li>DVRC research internship, supervised by Prof. Ahmed Azough</li>
+                </ul></div>
+                <div id="dta-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-purple">PyTorch</span><span class="tech-pill tp-purple">Graph Neural Networks</span><span class="tech-pill tp-purple">GRU</span><span class="tech-pill tp-blue">Google Research Football</span><span class="tech-pill tp-green">Pandas</span><span class="tech-pill tp-green">NumPy</span><span class="tech-pill tp-orange">Docker</span>
+                </div></div>
+                <div id="dta-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">Pass-arrival AUC 0.84 (baseline 0.62)</span><span class="impact-pill">Real receiver ranked 1st: 45% (nearest teammate 27%)</span><span class="impact-pill">Player movement error 1.11 m (baseline 1.51 m)</span><span class="impact-pill">Tested on unseen matches</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-amber"></div>In progress · DVRC internship</div>
+                <div style="display:flex;gap:14px;"><a class="project-link" href="https://github.com/srinivasand04/dynamic-tactical-ai-football" target="_blank" rel="noopener noreferrer">GitHub →</a><a class="project-link" href="experience.html">Experience →</a></div>
+            </div>
+        </div>
+
+        <!-- CareerPilot — Personal Job-Search Workspace -->
+        <div class="project-card sw reveal" data-cat="software">
+            <div class="project-banner" style="background:linear-gradient(135deg,#0a1628,#0e2240);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="CareerPilot · Job-search workspace · Oct 2026">
+                    <rect width="330" height="130" fill="#0a1628"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#0e2240" stroke="#3b82f6" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#93c5fd" text-anchor="middle">Greenhouse</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#5b9df7" text-anchor="middle">Lever · Ashby</text>
+                    <text x="56" y="81" font-family="monospace" font-size="5.8" fill="#3b82f6" text-anchor="middle">board APIs</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#3b82f6" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#3b82f6"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#0e2240" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#86efac" text-anchor="middle">FastAPI</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">PostgreSQL</text>
+                    <text x="164" y="81" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">sync + search</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#4ade80" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#4ade80"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#0e2240" stroke="#f59e0b" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#fcd34d" text-anchor="middle">React</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#fbbf24" text-anchor="middle">tracker</text>
+                    <text x="273" y="81" font-family="monospace" font-size="5.8" fill="#f59e0b" text-anchor="middle">follow-ups</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#1e3a5a" text-anchor="middle">CareerPilot · Job-search workspace · Oct 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-teal">FULL STACK</span>
+                    <span class="proj-company">srinivasand04/CareerPilot_AI · Oct 2026</span>
+                </div>
+                <div class="proj-title">CareerPilot — Personal Job-Search Workspace</div>
+                <div class="proj-desc"><strong>Problem:</strong> Job listings are spread over many company boards, and applications, notes and follow-ups are easy to lose.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'career-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'career-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'career-o')">Outcome</div>
+                </div>
+                <div id="career-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>Syncs listings from public Greenhouse, Lever and Ashby board APIs into PostgreSQL</li>
+                    <li>FastAPI backend with search and filters (France + English by default)</li>
+                    <li>React + TypeScript tracker: 7 stages from saved to offer / rejected / withdrawn, notes and follow-up dates</li>
+                    <li>Dashboard with pipeline totals and upcoming follow-ups; idempotent importer for a college internship catalogue</li>
+                    <li>Optional Cloudflare Worker + D1 deployment with a single workspace password</li>
+                </ul></div>
+                <div id="career-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-green">FastAPI</span><span class="tech-pill tp-blue">SQLAlchemy</span><span class="tech-pill tp-blue">PostgreSQL</span><span class="tech-pill tp-teal">React 19</span><span class="tech-pill tp-teal">TypeScript</span><span class="tech-pill">Vite</span><span class="tech-pill tp-orange">Docker</span><span class="tech-pill tp-orange">Cloudflare Workers / D1</span><span class="tech-pill">pytest</span>
+                </div></div>
+                <div id="career-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">3 job-board APIs</span><span class="impact-pill">7-stage application pipeline</span><span class="impact-pill">Local + Cloudflare deploy path</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-blue"></div>Open Source · Python / TS</div>
+                <a class="project-link" href="https://github.com/srinivasand04/CareerPilot_AI" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
+        <!-- VoiceOps AI — Conversation Intelligence -->
+        <div class="project-card ai reveal" data-cat="ai">
+            <div class="project-banner" style="background:linear-gradient(135deg,#160a1f,#24123a);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="VoiceOps AI · v0.1.0 · Oct 2026">
+                    <rect width="330" height="130" fill="#160a1f"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#24123a" stroke="#f43f5e" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#fda4af" text-anchor="middle">Audio call</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#fb7185" text-anchor="middle">WAV / MP3</text>
+                    <text x="56" y="81" font-family="monospace" font-size="5.8" fill="#f43f5e" text-anchor="middle">upload</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#f43f5e" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#f43f5e"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#24123a" stroke="#a855f7" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#e9d5ff" text-anchor="middle">Faster-Whisper</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#c084fc" text-anchor="middle">ASR</text>
+                    <text x="164" y="81" font-family="monospace" font-size="5.8" fill="#a855f7" text-anchor="middle">timestamps</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#a855f7" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#a855f7"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#24123a" stroke="#3b82f6" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#93c5fd" text-anchor="middle">PostgreSQL</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#5b9df7" text-anchor="middle">transcripts</text>
+                    <text x="273" y="81" font-family="monospace" font-size="5.8" fill="#3b82f6" text-anchor="middle">→ LLM next</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#3b1a6a" text-anchor="middle">VoiceOps AI · v0.1.0 · Oct 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-wip">IN PROGRESS</span>
+                    <span class="proj-badge badge-aca">SPEECH AI</span>
+                    <span class="proj-company">srinivasand04/voiceops-ai · Oct 2026</span>
+                </div>
+                <div class="proj-title">VoiceOps AI — Conversation Intelligence</div>
+                <div class="proj-desc"><strong>Problem:</strong> Customer call recordings contain useful information, but as audio they cannot be searched, measured or summarised.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'voiceops-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'voiceops-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'voiceops-o')">Outcome</div>
+                </div>
+                <div id="voiceops-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>FastAPI upload endpoint with WAV / MP3 validation and file storage</li>
+                    <li>Faster-Whisper speech-to-text with language detection and timestamped segments</li>
+                    <li>Call metadata and transcripts stored in PostgreSQL 17</li>
+                    <li>Automated backend API tests running in a GitHub Actions CI pipeline; Docker deployment</li>
+                    <li>Planned next: speaker diarization, sentiment, intent, LLM summary and action items, React dashboard</li>
+                </ul></div>
+                <div id="voiceops-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-green">FastAPI</span><span class="tech-pill">Pydantic</span><span class="tech-pill tp-purple">Faster-Whisper</span><span class="tech-pill tp-blue">SQLAlchemy</span><span class="tech-pill tp-blue">PostgreSQL 17</span><span class="tech-pill tp-orange">Docker Compose</span><span class="tech-pill tp-orange">GitHub Actions</span><span class="tech-pill tp-teal">React</span><span class="tech-pill tp-teal">TypeScript</span>
+                </div></div>
+                <div id="voiceops-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">v0.1.0 ASR baseline released</span><span class="impact-pill">Audio → stored transcript, end to end</span><span class="impact-pill">CI with automated tests</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-amber"></div>In progress · v0.1.0</div>
+                <a class="project-link" href="https://github.com/srinivasand04/voiceops-ai" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
+        <!-- SQL → NoSQL Migration with GNNs — M.Sc. Thesis -->
+        <div class="project-card ai reveal" data-cat="ai">
+            <div class="project-banner" style="background:linear-gradient(135deg,#0a1628,#0e2240);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="SQL → NoSQL via GNN · Master&#x27;s thesis · Jun 2026">
+                    <rect width="330" height="130" fill="#0a1628"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#0e2240" stroke="#3b82f6" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#93c5fd" text-anchor="middle">SQL schema</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#5b9df7" text-anchor="middle">9 tables</text>
+                    <text x="56" y="81" font-family="monospace" font-size="5.8" fill="#3b82f6" text-anchor="middle">1.55M rows</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#3b82f6" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#3b82f6"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#0e2240" stroke="#22d3ee" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#67e8f9" text-anchor="middle">GCN / GAT</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">embed / ref</text>
+                    <text x="164" y="81" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">/ denormalize</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#22d3ee" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#22d3ee"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#0e2240" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#86efac" text-anchor="middle">MongoDB</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">+ cost on</text>
+                    <text x="273" y="81" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">4 clouds</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#1e3a5a" text-anchor="middle">SQL → NoSQL via GNN · Master&#x27;s thesis · Jun 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-aca">MASTER&#x27;S THESIS</span>
+                    <span class="proj-badge badge-aca">GNN · ML</span>
+                    <span class="proj-company">srinivasand04/sql-to-nosql-migration-framework · Jun 2026</span>
+                </div>
+                <div class="proj-title">SQL → NoSQL Migration with GNNs — M.Sc. Thesis</div>
+                <div class="proj-desc"><strong>Problem:</strong> Moving a relational schema to MongoDB means deciding, table by table, whether to embed, reference or denormalize — and which cloud will be cheapest. This is usually done by hand.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'thesis-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'thesis-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'thesis-o')">Outcome</div>
+                </div>
+                <div id="thesis-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>Real Olist e-commerce dataset: 9 tables, 1.55M rows</li>
+                    <li>Schema as a graph (tables = nodes, foreign keys = edges) over 300 generated workload scenarios</li>
+                    <li>GCN and GAT classify each table as EMBED / REFERENCE / DENORMALIZE, compared with Random Forest and XGBoost baselines</li>
+                    <li>LSTM forecasts the next hot table from query history</li>
+                    <li>XGBoost multi-output model predicts monthly cost on 4 cloud providers, explained with SHAP; runs tracked in MLflow</li>
+                </ul></div>
+                <div id="thesis-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-purple">PyTorch Geometric</span><span class="tech-pill tp-purple">GCN / GAT</span><span class="tech-pill tp-purple">LSTM</span><span class="tech-pill tp-green">XGBoost</span><span class="tech-pill">SHAP</span><span class="tech-pill tp-orange">MLflow</span><span class="tech-pill tp-teal">MongoDB</span><span class="tech-pill tp-blue">Pandas</span>
+                </div></div>
+                <div id="thesis-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">GAT 98.0% val accuracy (= XGBoost)</span><span class="impact-pill">Cost model avg R² 0.973</span><span class="impact-pill">LSTM 17.0% vs 11.1% random</span><span class="impact-pill">4 cloud providers compared</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-green"></div>Complete · Jun 2026</div>
+                <a class="project-link" href="https://github.com/srinivasand04/sql-to-nosql-migration-framework" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
+        <!-- Ashwika Alimentation — Local Shop Website -->
+        <div class="project-card sw reveal" data-cat="software">
+            <div class="project-banner" style="background:linear-gradient(135deg,#14110a,#231c10);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="Ashwika Alimentation · Paris 13 · May 2026">
+                    <rect width="330" height="130" fill="#14110a"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#231c10" stroke="#f59e0b" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#fcd34d" text-anchor="middle">Grocery</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#fbbf24" text-anchor="middle">Transfer · Xerox</text>
+                    <text x="56" y="81" font-family="monospace" font-size="5.8" fill="#f59e0b" text-anchor="middle">Parcel</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#f59e0b" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#f59e0b"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#231c10" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#86efac" text-anchor="middle">4 pages</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">HTML / CSS / JS</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#4ade80" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#4ade80"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#231c10" stroke="#22d3ee" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#67e8f9" text-anchor="middle">EN · FR · TA</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">trilingual</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#4a3a1a" text-anchor="middle">Ashwika Alimentation · Paris 13 · May 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-teal">FREELANCE · WEB</span>
+                    <span class="proj-company">srinivasand04/Website-alimentation · May 2026</span>
+                </div>
+                <div class="proj-title">Ashwika Alimentation — Local Shop Website</div>
+                <div class="proj-desc"><strong>Problem:</strong> A Paris 13 grocery shop (also money transfer, copy and parcel services) needed a simple web presence for customers who speak different languages.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'aliment-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'aliment-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'aliment-o')">Outcome</div>
+                </div>
+                <div id="aliment-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>Static multi-page site: home, services, about and contact</li>
+                    <li>Trilingual content in English, French and Tamil</li>
+                    <li>Plain HTML, CSS and JavaScript — no build step, easy to host</li>
+                </ul></div>
+                <div id="aliment-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-orange">HTML</span><span class="tech-pill tp-blue">CSS</span><span class="tech-pill tp-green">JavaScript</span>
+                </div></div>
+                <div id="aliment-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">4 pages</span><span class="impact-pill">3 languages (EN / FR / TA)</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-green"></div>Delivered · Freelance</div>
+                <a class="project-link" href="https://github.com/srinivasand04/Website-alimentation" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
+        <!-- Arunthy Studio — Photo &amp; Video Studio Website -->
+        <div class="project-card sw reveal" data-cat="software">
+            <div class="project-banner" style="background:linear-gradient(135deg,#0f0f14,#1c1c26);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="Arunthy Studio · Freelance · May 2026">
+                    <rect width="330" height="130" fill="#0f0f14"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#1c1c26" stroke="#f43f5e" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#fda4af" text-anchor="middle">Next.js 14</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#fb7185" text-anchor="middle">TypeScript</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#f43f5e" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#f43f5e"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#1c1c26" stroke="#a855f7" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#e9d5ff" text-anchor="middle">Tailwind</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#c084fc" text-anchor="middle">Framer Motion</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#a855f7" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#a855f7"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#1c1c26" stroke="#22d3ee" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#67e8f9" text-anchor="middle">EN / FR</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">dark / light</text>
+                    <text x="273" y="81" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">Vercel</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#3a3a4a" text-anchor="middle">Arunthy Studio · Freelance · May 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-teal">FREELANCE · WEB</span>
+                    <span class="proj-company">srinivasand04/Website-studio · May 2026</span>
+                </div>
+                <div class="proj-title">Arunthy Studio — Photo &amp; Video Studio Website</div>
+                <div class="proj-desc"><strong>Problem:</strong> A Paris photo and video studio needed a modern, bilingual site that works well on phones.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'studio-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'studio-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'studio-o')">Outcome</div>
+                </div>
+                <div id="studio-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>Next.js 14 app with TypeScript and Tailwind CSS</li>
+                    <li>Framer Motion animations, dark / light theme toggle</li>
+                    <li>English / French bilingual content and fully responsive layout</li>
+                    <li>Deployed on Vercel</li>
+                </ul></div>
+                <div id="studio-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-teal">Next.js 14</span><span class="tech-pill tp-teal">React</span><span class="tech-pill tp-blue">TypeScript</span><span class="tech-pill tp-blue">Tailwind CSS</span><span class="tech-pill tp-purple">Framer Motion</span><span class="tech-pill">Vercel</span>
+                </div></div>
+                <div id="studio-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">Live on Vercel</span><span class="impact-pill">EN / FR</span><span class="impact-pill">Dark + light theme</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-green"></div>Delivered · Freelance</div>
+                <div style="display:flex;gap:14px;"><a class="project-link" href="https://website-studio-tawny.vercel.app" target="_blank" rel="noopener noreferrer">Live →</a><a class="project-link" href="https://github.com/srinivasand04/Website-studio" target="_blank" rel="noopener noreferrer">GitHub →</a></div>
+            </div>
+        </div>
+
+        <!-- TacticAI-Lite — GNN Corner-Kick Analysis -->
+        <div class="project-card ai reveal" data-cat="ai">
+            <div class="project-banner" style="background:linear-gradient(135deg,#0d0f1a,#1a1330);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%">
+                    <rect width="330" height="130" fill="#0d0f1a"/>
+                    <rect x="30" y="20" width="270" height="90" rx="5" fill="none" stroke="#2d3748" stroke-width="1.2"/>
+                    <line x1="165" y1="20" x2="165" y2="110" stroke="#2d3748" stroke-width="1"/>
+                    <circle cx="165" cy="65" r="18" fill="none" stroke="#2d3748" stroke-width="1"/>
+                    <circle cx="80"  cy="42" r="6" fill="#7c3aed" opacity="0.9"/>
+                    <circle cx="130" cy="68" r="6" fill="#7c3aed" opacity="0.9"/>
+                    <circle cx="105" cy="95" r="6" fill="#a855f7" opacity="0.8"/>
+                    <circle cx="165" cy="50" r="7" fill="#9333ea" opacity="1"/>
+                    <circle cx="200" cy="80" r="6" fill="#7c3aed" opacity="0.9"/>
+                    <circle cx="245" cy="55" r="6" fill="#a855f7" opacity="0.8"/>
+                    <circle cx="250" cy="95" r="6" fill="#7c3aed" opacity="0.9"/>
+                    <line x1="80"  y1="42" x2="130" y2="68" stroke="#7c3aed" stroke-width="1.2" opacity="0.7"/>
+                    <line x1="130" y1="68" x2="105" y2="95" stroke="#7c3aed" stroke-width="1"   opacity="0.5"/>
+                    <line x1="130" y1="68" x2="165" y2="50" stroke="#a855f7" stroke-width="1.4" opacity="0.8"/>
+                    <line x1="165" y1="50" x2="200" y2="80" stroke="#a855f7" stroke-width="1.4" opacity="0.8"/>
+                    <line x1="200" y1="80" x2="245" y2="55" stroke="#7c3aed" stroke-width="1.2" opacity="0.7"/>
+                    <line x1="200" y1="80" x2="250" y2="95" stroke="#7c3aed" stroke-width="1"   opacity="0.5"/>
+                    <line x1="80"  y1="42" x2="165" y2="50" stroke="#6d28d9" stroke-width="1"   opacity="0.4"/>
+                    <text x="80"  y="33" font-family="monospace" font-size="5" fill="#c084fc" text-anchor="middle">GK</text>
+                    <text x="130" y="59" font-family="monospace" font-size="5" fill="#c084fc" text-anchor="middle">DEF</text>
+                    <text x="165" y="41" font-family="monospace" font-size="5" fill="#e879f9" text-anchor="middle">MID</text>
+                    <text x="200" y="71" font-family="monospace" font-size="5" fill="#c084fc" text-anchor="middle">FWD</text>
+                    <text x="245" y="46" font-family="monospace" font-size="5" fill="#c084fc" text-anchor="middle">FWD</text>
+                    <rect x="52" y="6" width="80" height="11" rx="3" fill="#4c1d95" opacity="0.8"/>
+                    <text x="92" y="14.5" font-family="monospace" font-size="5.5" fill="#e9d5ff" text-anchor="middle">GCN / GAT</text>
+                    <rect x="200" y="6" width="80" height="11" rx="3" fill="#4c1d95" opacity="0.8"/>
+                    <text x="240" y="14.5" font-family="monospace" font-size="5.5" fill="#e9d5ff" text-anchor="middle">StatsBomb Data</text>
+                    <text x="165" y="124" font-family="monospace" font-size="5" fill="#4c1d95" text-anchor="middle">TacticAI-Lite · Football GNN · May 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-aca">GNN · GITHUB</span>
+                    <span class="proj-company">srinivasand04/tacticai-lite · May 2026</span>
+                </div>
+                <div class="proj-title">TacticAI-Lite — GNN Corner-Kick Analysis</div>
+                <div class="proj-desc"><strong>Problem:</strong> From the positions of all 22 players at a corner kick, predict which attacker will receive the ball — a small, open-data version of DeepMind&#x27;s TacticAI.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'tactic-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'tactic-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'tactic-o')">Outcome</div>
+                </div>
+                <div id="tactic-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>StatsBomb Open Data freeze frames turned into 22-player graphs with PyTorch Geometric</li>
+                    <li>Implemented GCN (Kipf &amp; Welling 2017) and GAT (Veličković et al. 2018), 3 layers each</li>
+                    <li>Receiver prediction as node classification, same task for both models side by side</li>
+                    <li>What-If simulator: move a player by (dx, dy) and see how predictions shift</li>
+                    <li>Pitch, graph and attention-weight visualisations with mplsoccer</li>
+                </ul></div>
+                <div id="tactic-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-purple">PyTorch</span><span class="tech-pill tp-purple">PyTorch Geometric</span><span class="tech-pill tp-purple">GCN / GAT</span><span class="tech-pill tp-blue">statsbombpy</span><span class="tech-pill">mplsoccer</span><span class="tech-pill tp-green">scikit-learn</span><span class="tech-pill tp-green">Pandas</span><span class="tech-pill">Jupyter</span>
+                </div></div>
+                <div id="tactic-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">GAT ~38–44% val accuracy</span><span class="impact-pill">GCN ~35–40%</span><span class="impact-pill">~4.5× over 9% random baseline</span><span class="impact-pill">Led to DVRC internship</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-green"></div>Complete · May 2026</div>
+                <a class="project-link" href="https://github.com/srinivasand04/tacticai-lite" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
+        <!-- Employee Attrition Prediction — MLOps -->
+        <div class="project-card ai reveal" data-cat="ai">
+            <div class="project-banner" style="background:linear-gradient(135deg,#0f1a0a,#162812);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="Employee Attrition · MLOps · Mar 2026">
+                    <rect width="330" height="130" fill="#0f1a0a"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#162812" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#86efac" text-anchor="middle">sklearn</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">Pipeline</text>
+                    <text x="56" y="81" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">LogReg</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#4ade80" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#4ade80"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#162812" stroke="#f59e0b" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#fcd34d" text-anchor="middle">MLflow</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#fbbf24" text-anchor="middle">tracking</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#f59e0b" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#f59e0b"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#162812" stroke="#3b82f6" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#93c5fd" text-anchor="middle">FastAPI</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#5b9df7" text-anchor="middle">Docker</text>
+                    <text x="273" y="81" font-family="monospace" font-size="5.8" fill="#3b82f6" text-anchor="middle">/predict</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#1a3010" text-anchor="middle">Employee Attrition · MLOps · Mar 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-aca">MLOPS · GITHUB</span>
+                    <span class="proj-company">srinivasand04/employee-attrition-MLOPS · Mar 2026</span>
+                </div>
+                <div class="proj-title">Employee Attrition Prediction — MLOps</div>
+                <div class="proj-desc"><strong>Problem:</strong> Predict which employees are likely to leave from historical HR data — and serve the model like a production system, not a notebook.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'attrition-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'attrition-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'attrition-o')">Outcome</div>
+                </div>
+                <div id="attrition-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>scikit-learn Pipeline with ColumnTransformer + Logistic Regression, so training and inference use identical preprocessing</li>
+                    <li>MLflow tracks parameters, metrics and model artifacts for every run</li>
+                    <li>FastAPI /predict and /health endpoints with Pydantic validation, logging and timing</li>
+                    <li>Docker image (Python 3.11-slim); pre-commit with Black, isort and Flake8; pytest with coverage</li>
+                    <li>Team project with feature branches, pull requests and conventional commits</li>
+                </ul></div>
+                <div id="attrition-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-green">scikit-learn</span><span class="tech-pill tp-orange">MLflow</span><span class="tech-pill tp-green">FastAPI</span><span class="tech-pill">Pydantic</span><span class="tech-pill tp-orange">Docker</span><span class="tech-pill tp-blue">pytest</span><span class="tech-pill">uv</span>
+                </div></div>
+                <div id="attrition-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">~89% accuracy</span><span class="impact-pill">≥70% test coverage</span><span class="impact-pill">Dockerised REST API</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-green"></div>Complete · ESILV</div>
+                <a class="project-link" href="https://github.com/srinivasand04/employee-attrition-MLOPS" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
+        <!-- Yelp Review Sentiment — Fine-tuned RoBERTa -->
+        <div class="project-card ai reveal" data-cat="ai">
+            <div class="project-banner" style="background:linear-gradient(135deg,#1a0533,#2d1259);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="Yelp Review Sentiment · NLP · Feb 2026">
+                    <rect width="330" height="130" fill="#1a0533"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#2d1259" stroke="#a855f7" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#e9d5ff" text-anchor="middle">Yelp reviews</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#c084fc" text-anchor="middle">650k train</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#a855f7" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#a855f7"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#2d1259" stroke="#a855f7" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#e9d5ff" text-anchor="middle">RoBERTa-base</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#c084fc" text-anchor="middle">fine-tuned</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#a855f7" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#a855f7"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#2d1259" stroke="#22d3ee" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#67e8f9" text-anchor="middle">1–5 stars</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">F1 ~0.62</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#3b1a6a" text-anchor="middle">Yelp Review Sentiment · NLP · Feb 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-aca">NLP · GITHUB</span>
+                    <span class="proj-company">srinivasand04/NLP_Project · Feb 2026</span>
+                </div>
+                <div class="proj-title">Yelp Review Sentiment — Fine-tuned RoBERTa</div>
+                <div class="proj-desc"><strong>Problem:</strong> Classify restaurant reviews into 1–5 stars from text only — a harder task than positive / negative.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'nlp-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'nlp-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'nlp-o')">Outcome</div>
+                </div>
+                <div id="nlp-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>Yelp Review Full dataset from Hugging Face (~650k training, ~50k test reviews)</li>
+                    <li>Fine-tuned RoBERTa-base for 5-class classification, on a subsample because of CPU limits</li>
+                    <li>Evaluated with precision, recall, F1 and a confusion matrix</li>
+                </ul></div>
+                <div id="nlp-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-purple">Hugging Face Transformers</span><span class="tech-pill tp-purple">RoBERTa</span><span class="tech-pill tp-blue">Pandas</span><span class="tech-pill">Jupyter</span>
+                </div></div>
+                <div id="nlp-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">~62% accuracy</span><span class="impact-pill">Weighted F1 ~0.62</span><span class="impact-pill">5 classes</span><span class="impact-pill">Strongest on 1★ and 5★</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-green"></div>Complete · ESILV</div>
+                <a class="project-link" href="https://github.com/srinivasand04/NLP_Project" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
+        <!-- Stock Market Prediction — ML vs LSTM -->
+        <div class="project-card ai reveal" data-cat="ai">
+            <div class="project-banner" style="background:linear-gradient(135deg,#0e0818,#1a0f30);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="Stock Market ML / DL · Feb 2026">
+                    <rect width="330" height="130" fill="#0e0818"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#1a0f30" stroke="#3b82f6" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#93c5fd" text-anchor="middle">Daily prices</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#5b9df7" text-anchor="middle">1970–2018</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#3b82f6" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#3b82f6"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#1a0f30" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#86efac" text-anchor="middle">RF · SVM · KNN</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">GridSearchCV</text>
+                    <text x="164" y="81" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">SHAP</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#4ade80" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#4ade80"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#1a0f30" stroke="#a855f7" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#e9d5ff" text-anchor="middle">LSTM</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#c084fc" text-anchor="middle">sequence</text>
+                    <text x="273" y="81" font-family="monospace" font-size="5.8" fill="#a855f7" text-anchor="middle">model</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#3b1f6a" text-anchor="middle">Stock Market ML / DL · Feb 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-aca">ML · DEEP LEARNING</span>
+                    <span class="proj-company">srinivasand04/Stock-Market-ML-DL-Prediction_Deep_Learning · Feb 2026</span>
+                </div>
+                <div class="proj-title">Stock Market Prediction — ML vs LSTM</div>
+                <div class="proj-desc"><strong>Problem:</strong> Predict the next-day price and the up / down direction of stocks from daily history (1970–2018).</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'stock-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'stock-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'stock-o')">Outcome</div>
+                </div>
+                <div id="stock-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>Feature engineering: MA10 / MA50, RSI, volatility, daily returns and lag features</li>
+                    <li>Compared Linear Regression, Random Forest, SVM, KNN and Decision Tree; tuned Random Forest with GridSearchCV</li>
+                    <li>SHAP for explainability, then an LSTM for sequence modelling</li>
+                </ul></div>
+                <div id="stock-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-green">scikit-learn</span><span class="tech-pill tp-purple">LSTM</span><span class="tech-pill">SHAP</span><span class="tech-pill tp-blue">Pandas</span><span class="tech-pill">Jupyter</span>
+                </div></div>
+                <div id="stock-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">Direction accuracy ≈ 50%</span><span class="impact-pill">Linear models tracked trend best</span><span class="impact-pill">Honest finding: market data is noisy</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-green"></div>Complete · ESILV</div>
+                <a class="project-link" href="https://github.com/srinivasand04/Stock-Market-ML-DL-Prediction_Deep_Learning" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
+        <!-- Brain Tumor Detection from MRI Scans -->
+        <div class="project-card ai reveal" data-cat="ai">
+            <div class="project-banner" style="background:linear-gradient(135deg,#0f1520,#1a2535);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="Brain Tumor Detection · Computer Vision · Jan 2026">
+                    <rect width="330" height="130" fill="#0f1520"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#1a2535" stroke="#22d3ee" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#67e8f9" text-anchor="middle">MRI scans</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">tumor / none</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#22d3ee" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#22d3ee"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#1a2535" stroke="#3b82f6" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#93c5fd" text-anchor="middle">CNN · ResNet50</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#5b9df7" text-anchor="middle">EfficientNet</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#3b82f6" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#3b82f6"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#1a2535" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#86efac" text-anchor="middle">Recall 100%</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">tumor class</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#1a2a3a" text-anchor="middle">Brain Tumor Detection · Computer Vision · Jan 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-aca">COMPUTER VISION</span>
+                    <span class="proj-company">srinivasand04/ComputerVision · Jan 2026</span>
+                </div>
+                <div class="proj-title">Brain Tumor Detection from MRI Scans</div>
+                <div class="proj-desc"><strong>Problem:</strong> Detect brain tumors in MRI images automatically, and compare a small CNN with transfer-learning models.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'cv-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'cv-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'cv-o')">Outcome</div>
+                </div>
+                <div id="cv-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>Kaggle brain MRI dataset (tumor / no tumor), split 70 / 15 / 15</li>
+                    <li>Basic CNN from scratch vs ResNet50 and EfficientNetB0 transfer learning</li>
+                    <li>Evaluated with accuracy, precision, recall, F1 and confusion matrices</li>
+                </ul></div>
+                <div id="cv-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-orange">TensorFlow / Keras</span><span class="tech-pill tp-purple">ResNet50</span><span class="tech-pill tp-purple">EfficientNetB0</span><span class="tech-pill tp-blue">OpenCV</span><span class="tech-pill tp-green">scikit-learn</span>
+                </div></div>
+                <div id="cv-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">100% tumor recall</span><span class="impact-pill">Best accuracy 65%</span><span class="impact-pill">Found class-imbalance bias</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-green"></div>Complete · ESILV</div>
+                <a class="project-link" href="https://github.com/srinivasand04/ComputerVision" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
+        <!-- Air Quality Big Data Pipeline — Kafka &amp; Spark -->
+        <div class="project-card ai reveal" data-cat="ai">
+            <div class="project-banner" style="background:linear-gradient(135deg,#0a1628,#0c2240);">
+                <svg viewBox="0 0 330 130" width="100%" height="100%" role="img" aria-label="AQI Big Data · Kafka / Spark · Jan 2026">
+                    <rect width="330" height="130" fill="#0a1628"/>
+                    <rect x="16" y="30" width="80" height="70" rx="7" fill="#0c2240" stroke="#22d3ee" stroke-width="1.2"/>
+                    <text x="56" y="57" font-family="monospace" font-size="6.5" fill="#67e8f9" text-anchor="middle">Kafka</text>
+                    <text x="56" y="69" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">streaming</text>
+                    <text x="56" y="81" font-family="monospace" font-size="5.8" fill="#22d3ee" text-anchor="middle">REST source</text>
+                    <line x1="98" y1="65" x2="118" y2="65" stroke="#22d3ee" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#22d3ee"/>
+                    <rect x="122" y="30" width="84" height="70" rx="7" fill="#0c2240" stroke="#4ade80" stroke-width="1.2"/>
+                    <text x="164" y="57" font-family="monospace" font-size="6.5" fill="#86efac" text-anchor="middle">Spark</text>
+                    <text x="164" y="69" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">HDFS</text>
+                    <text x="164" y="81" font-family="monospace" font-size="5.8" fill="#4ade80" text-anchor="middle">batch + stream</text>
+                    <line x1="208" y1="65" x2="228" y2="65" stroke="#4ade80" stroke-width="1.2"/><polygon points="226,62 232,65 226,68" fill="#4ade80"/>
+                    <rect x="232" y="30" width="82" height="70" rx="7" fill="#0c2240" stroke="#f59e0b" stroke-width="1.2"/>
+                    <text x="273" y="57" font-family="monospace" font-size="6.5" fill="#fcd34d" text-anchor="middle">InfluxDB</text>
+                    <text x="273" y="69" font-family="monospace" font-size="5.8" fill="#fbbf24" text-anchor="middle">Grafana</text>
+                    <text x="273" y="81" font-family="monospace" font-size="5.8" fill="#f59e0b" text-anchor="middle">dashboards</text>
+                    <text x="165" y="116" font-family="monospace" font-size="5" fill="#1e3a5a" text-anchor="middle">AQI Big Data · Kafka / Spark · Jan 2026</text>
+                </svg>
+            </div>
+            <div class="project-body">
+                <div class="project-meta">
+                    <span class="proj-badge badge-aca">BIG DATA</span>
+                    <span class="proj-company">srinivasand04/BigData_Project · Jan 2026</span>
+                </div>
+                <div class="proj-title">Air Quality Big Data Pipeline — Kafka &amp; Spark</div>
+                <div class="proj-desc"><strong>Problem:</strong> Monitor air quality (AQI and pollutants) across major French cities with streaming and batch analytics.</div>
+                <div class="proj-tabs">
+                    <div class="proj-tab active" onclick="switchTab(this,'aqi-a')">Approach</div>
+                    <div class="proj-tab" onclick="switchTab(this,'aqi-s')">Stack</div>
+                    <div class="proj-tab" onclick="switchTab(this,'aqi-o')">Outcome</div>
+                </div>
+                <div id="aqi-a" class="proj-tab-content active"><ul class="resp-list">
+                    <li>Producer pulls AQI data from a public REST API into Apache Kafka</li>
+                    <li>Apache Spark for streaming and batch processing on a distributed cluster</li>
+                    <li>HDFS for storage, InfluxDB for time series, Grafana dashboards</li>
+                </ul></div>
+                <div id="aqi-s" class="proj-tab-content"><div class="tech-pills">
+                    <span class="tech-pill tp-teal">Apache Kafka</span><span class="tech-pill tp-teal">Apache Spark</span><span class="tech-pill tp-teal">HDFS</span><span class="tech-pill tp-blue">InfluxDB</span><span class="tech-pill tp-orange">Grafana</span><span class="tech-pill tp-green">Python</span><span class="tech-pill">Shell</span>
+                </div></div>
+                <div id="aqi-o" class="proj-tab-content"><div class="impact-pills">
+                    <span class="impact-pill">5 cities</span><span class="impact-pill">7 days of data</span><span class="impact-pill">Streaming + batch</span>
+                </div></div>
+            </div>
+            <div class="proj-footer">
+                <div class="proj-status"><div class="status-dot dot-green"></div>Complete · ESILV</div>
+                <a class="project-link" href="https://github.com/srinivasand04/BigData_Project" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+        </div>
+
     </div>
 
 
@@ -403,391 +1114,6 @@
 
     </div>
 
-
-    <h3 class="proj-cat-label" id="cat-aca">Academic &amp; Open Source — GitHub Projects</h3>
-    <p style="font-size:0.8rem;color:var(--text3);margin:-10px 0 22px;font-style:italic;">M.Sc. Data Science &amp; AI — ESILV Paris (2025–2026) &amp; personal open-source work</p>
-    <div class="projects-grid">
-
-        <!-- 1. TacticAI-Lite -->
-        <div class="project-card academic reveal" data-cat="academic">
-            <div class="project-banner" style="background:linear-gradient(135deg,#0d0f1a,#1a1330);">
-                <svg viewBox="0 0 330 130" width="100%" height="100%">
-                    <rect width="330" height="130" fill="#0d0f1a"/>
-                    <rect x="30" y="20" width="270" height="90" rx="5" fill="none" stroke="#2d3748" stroke-width="1.2"/>
-                    <line x1="165" y1="20" x2="165" y2="110" stroke="#2d3748" stroke-width="1"/>
-                    <circle cx="165" cy="65" r="18" fill="none" stroke="#2d3748" stroke-width="1"/>
-                    <circle cx="80"  cy="42" r="6" fill="#7c3aed" opacity="0.9"/>
-                    <circle cx="130" cy="68" r="6" fill="#7c3aed" opacity="0.9"/>
-                    <circle cx="105" cy="95" r="6" fill="#a855f7" opacity="0.8"/>
-                    <circle cx="165" cy="50" r="7" fill="#9333ea" opacity="1"/>
-                    <circle cx="200" cy="80" r="6" fill="#7c3aed" opacity="0.9"/>
-                    <circle cx="245" cy="55" r="6" fill="#a855f7" opacity="0.8"/>
-                    <circle cx="250" cy="95" r="6" fill="#7c3aed" opacity="0.9"/>
-                    <line x1="80"  y1="42" x2="130" y2="68" stroke="#7c3aed" stroke-width="1.2" opacity="0.7"/>
-                    <line x1="130" y1="68" x2="105" y2="95" stroke="#7c3aed" stroke-width="1"   opacity="0.5"/>
-                    <line x1="130" y1="68" x2="165" y2="50" stroke="#a855f7" stroke-width="1.4" opacity="0.8"/>
-                    <line x1="165" y1="50" x2="200" y2="80" stroke="#a855f7" stroke-width="1.4" opacity="0.8"/>
-                    <line x1="200" y1="80" x2="245" y2="55" stroke="#7c3aed" stroke-width="1.2" opacity="0.7"/>
-                    <line x1="200" y1="80" x2="250" y2="95" stroke="#7c3aed" stroke-width="1"   opacity="0.5"/>
-                    <line x1="80"  y1="42" x2="165" y2="50" stroke="#6d28d9" stroke-width="1"   opacity="0.4"/>
-                    <text x="80"  y="33" font-family="monospace" font-size="5" fill="#c084fc" text-anchor="middle">GK</text>
-                    <text x="130" y="59" font-family="monospace" font-size="5" fill="#c084fc" text-anchor="middle">DEF</text>
-                    <text x="165" y="41" font-family="monospace" font-size="5" fill="#e879f9" text-anchor="middle">MID</text>
-                    <text x="200" y="71" font-family="monospace" font-size="5" fill="#c084fc" text-anchor="middle">FWD</text>
-                    <text x="245" y="46" font-family="monospace" font-size="5" fill="#c084fc" text-anchor="middle">FWD</text>
-                    <rect x="52" y="6" width="80" height="11" rx="3" fill="#4c1d95" opacity="0.8"/>
-                    <text x="92" y="14.5" font-family="monospace" font-size="5.5" fill="#e9d5ff" text-anchor="middle">GCN / GAT</text>
-                    <rect x="200" y="6" width="80" height="11" rx="3" fill="#4c1d95" opacity="0.8"/>
-                    <text x="240" y="14.5" font-family="monospace" font-size="5.5" fill="#e9d5ff" text-anchor="middle">StatsBomb Data</text>
-                    <text x="165" y="124" font-family="monospace" font-size="5" fill="#4c1d95" text-anchor="middle">TacticAI-Lite · Football GNN · May 2026</text>
-                </svg>
-            </div>
-            <div class="project-body">
-                <div class="project-meta">
-                    <span class="proj-badge badge-aca">GNN · GITHUB</span>
-                    <span class="proj-company">srinivasand04/tacticai-lite · May 2026</span>
-                </div>
-                <div class="proj-title">TacticAI-Lite — Football GNN Tactical Analysis</div>
-                <div class="proj-desc">Graph Neural Network system that models football matches as player graphs and predicts tactical outcomes. Implements GCN and GAT architectures on StatsBomb open data, achieving ~38-44% accuracy — 4× above the 9% random baseline across 9 formation classes. Now being extended into a whole-match tactical analysis system as a 6-month AI Research Internship at the De Vinci Research Center (DVRC), supervised by Prof. Ahmed Azough (Jun–Dec 2026).</div>
-                <div class="proj-tabs">
-                    <div class="proj-tab active" onclick="switchTab(this,'t10')">Tech Stack</div>
-                    <div class="proj-tab" onclick="switchTab(this,'r10')">Responsibilities</div>
-                    <div class="proj-tab" onclick="switchTab(this,'i10')">Impact</div>
-                </div>
-                <div id="t10" class="proj-tab-content active"><div class="tech-pills">
-                    <span class="tech-pill tp-purple">PyTorch Geometric</span><span class="tech-pill tp-purple">GCN</span><span class="tech-pill tp-purple">GAT</span><span class="tech-pill tp-green">Python</span><span class="tech-pill tp-blue">StatsBomb</span><span class="tech-pill">mplsoccer</span><span class="tech-pill tp-green">Scikit-learn</span><span class="tech-pill">Jupyter Notebook</span><span class="tech-pill tp-blue">Neo4j</span><span class="tech-pill tp-red">YOLO</span><span class="tech-pill tp-red">ByteTrack</span><span class="tech-pill tp-blue">OpenCV</span><span class="tech-pill tp-green">Pandas</span><span class="tech-pill tp-green">NumPy</span><span class="tech-pill tp-teal">SoccerNet</span>
-                </div></div>
-                <div id="r10" class="proj-tab-content"><ul class="resp-list">
-                    <li>Built player-graph construction pipeline from StatsBomb open event data using mplsoccer</li>
-                    <li>Implemented GCN (Kipf &amp; Welling 2017) and GAT (Veličković et al. 2018) architectures with PyTorch Geometric</li>
-                    <li>Trained multi-class formation classifier across 9 tactical formations (4-3-3, 4-4-2, 3-5-2, etc.)</li>
-                    <li>Evaluated with accuracy, confusion matrix, and per-class F1 — GAT outperformed GCN by ~4–5%</li>
-                    <li>Visualised pitch graphs and attention weights using mplsoccer and matplotlib</li>
-                    <li>Extending the system into a whole-match pipeline as a 6-month DVRC research internship — video-to-data extraction (YOLO + ByteTrack, SoccerNet GSR) and Neo4j graph-database modelling of team formations</li>
-                </ul></div>
-                <div id="i10" class="proj-tab-content"><div class="impact-pills">
-                    <span class="impact-pill">GAT ~38–44% accuracy</span><span class="impact-pill">4× over random baseline</span><span class="impact-pill">9 formation classes</span><span class="impact-pill">StatsBomb open data</span><span class="impact-pill">GNN on sports analytics</span><span class="impact-pill">6-mo DVRC internship</span>
-                </div></div>
-            </div>
-            <div class="proj-footer">
-                <div class="proj-status"><div class="status-dot dot-purple"></div>Active · DVRC Internship</div>
-                <div style="display:flex;gap:14px;">
-                    <a class="project-link" href="https://github.com/srinivasand04/tacticai-lite" target="_blank" rel="noopener noreferrer">GitHub →</a>
-                    <a class="project-link" href="experience.html">Experience →</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2. SQL to NoSQL Migration Framework -->
-        <div class="project-card academic reveal" data-cat="academic">
-            <div class="project-banner" style="background:linear-gradient(135deg,#0a1628,#0e2240);">
-                <svg viewBox="0 0 330 130" width="100%" height="100%">
-                    <rect width="330" height="130" fill="#0a1628"/>
-                    <rect x="18" y="32" width="80" height="66" rx="7" fill="#0d2040" stroke="#3b82f6" stroke-width="1.2"/>
-                    <text x="58" y="58" font-family="monospace" font-size="6.5" fill="#93c5fd" text-anchor="middle">SQL Server</text>
-                    <text x="58" y="70" font-family="monospace" font-size="6" fill="#5b9df7" text-anchor="middle">Schema</text>
-                    <text x="58" y="82" font-family="monospace" font-size="5.5" fill="#3b82f6" text-anchor="middle">Workload Analysis</text>
-                    <line x1="100" y1="65" x2="118" y2="65" stroke="#22d3ee" stroke-width="1.5"/><polygon points="116,62 122,65 116,68" fill="#22d3ee"/>
-                    <rect x="121" y="32" width="88" height="66" rx="7" fill="#0d2040" stroke="#22d3ee" stroke-width="1.5"/>
-                    <text x="165" y="56" font-family="monospace" font-size="6.5" fill="#67e8f9" text-anchor="middle">Transform</text>
-                    <text x="165" y="68" font-family="monospace" font-size="6" fill="#22d3ee" text-anchor="middle">Cost Estimation</text>
-                    <text x="165" y="80" font-family="monospace" font-size="5.5" fill="#06b6d4" text-anchor="middle">Multi-cloud Compare</text>
-                    <line x1="211" y1="65" x2="229" y2="65" stroke="#4ade80" stroke-width="1.2"/><polygon points="227,62 233,65 227,68" fill="#4ade80"/>
-                    <rect x="232" y="32" width="80" height="66" rx="7" fill="#0d2040" stroke="#4ade80" stroke-width="1.2"/>
-                    <text x="272" y="58" font-family="monospace" font-size="6.5" fill="#86efac" text-anchor="middle">MongoDB</text>
-                    <text x="272" y="70" font-family="monospace" font-size="6" fill="#4ade80" text-anchor="middle">DynamoDB</text>
-                    <text x="272" y="82" font-family="monospace" font-size="5.5" fill="#22c55e" text-anchor="middle">CosmosDB</text>
-                    <text x="165" y="114" font-family="monospace" font-size="5" fill="#1e3a5a" text-anchor="middle">SQL → NoSQL Migration Framework · Updated Jan 2026</text>
-                </svg>
-            </div>
-            <div class="project-body">
-                <div class="project-meta">
-                    <span class="proj-badge badge-aca">DATA ENG · GITHUB</span>
-                    <span class="proj-company">srinivasand04 · Updated Jan 2026</span>
-                </div>
-                <div class="proj-title">SQL to NoSQL Migration Framework</div>
-                <div class="proj-desc">Intelligent schema transformation framework — workload analysis, automated cost estimation, and multi-cloud comparison (MongoDB, DynamoDB, CosmosDB) for migration decisions.</div>
-                <div class="proj-tabs">
-                    <div class="proj-tab active" onclick="switchTab(this,'t6')">Tech Stack</div>
-                    <div class="proj-tab" onclick="switchTab(this,'r6')">Responsibilities</div>
-                    <div class="proj-tab" onclick="switchTab(this,'i6')">Impact</div>
-                </div>
-                <div id="t6" class="proj-tab-content active"><div class="tech-pills">
-                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-blue">SQL Server</span><span class="tech-pill tp-teal">MongoDB</span><span class="tech-pill tp-orange">DynamoDB</span><span class="tech-pill tp-purple">CosmosDB</span><span class="tech-pill">Schema Analysis</span><span class="tech-pill tp-blue">Cost Estimation</span><span class="tech-pill">Multi-cloud</span>
-                </div></div>
-                <div id="r6" class="proj-tab-content"><ul class="resp-list">
-                    <li>Built intelligent SQL schema parser and NoSQL transformation engine</li>
-                    <li>Implemented workload analysis to recommend optimal NoSQL target</li>
-                    <li>Cost estimation module comparing MongoDB Atlas, DynamoDB, and CosmosDB</li>
-                    <li>Multi-cloud comparison report generation with migration recommendations</li>
-                </ul></div>
-                <div id="i6" class="proj-tab-content"><div class="impact-pills">
-                    <span class="impact-pill">Automated schema transform</span><span class="impact-pill">Multi-cloud comparison</span><span class="impact-pill">Cost estimation</span>
-                </div></div>
-            </div>
-            <div class="proj-footer">
-                <div class="proj-status"><div class="status-dot dot-blue"></div>Open Source · Python</div>
-                <a class="project-link" href="https://github.com/srinivasand04/sql-to-nosql-migration-framework" target="_blank" rel="noopener noreferrer">GitHub →</a>
-            </div>
-        </div>
-
-        <!-- 3. Yelp Review Sentiment Analysis -->
-        <div class="project-card academic reveal" data-cat="academic">
-            <div class="project-banner" style="background:linear-gradient(135deg,#1a0533,#2d1259);">
-                <svg viewBox="0 0 330 130" width="100%" height="100%">
-                    <rect width="330" height="130" fill="#1a0533"/>
-                    <circle cx="165" cy="60" r="34" fill="none" stroke="#9333ea" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
-                    <circle cx="165" cy="60" r="22" fill="#2d1259" stroke="#9333ea" stroke-width="1.5"/>
-                    <text x="165" y="57" font-family="monospace" font-size="6" fill="#d8b4fe" text-anchor="middle">Transformers</text>
-                    <text x="165" y="69" font-family="monospace" font-size="5.5" fill="#a855f7" text-anchor="middle">BERT / DistilBERT</text>
-                    <rect x="18" y="40" width="76" height="40" rx="7" fill="#200a40" stroke="#7c3aed" stroke-width="1"/>
-                    <text x="56" y="58" font-family="monospace" font-size="6" fill="#c4b5fd" text-anchor="middle">HuggingFace</text>
-                    <text x="56" y="70" font-family="monospace" font-size="5.5" fill="#8b5cf6" text-anchor="middle">Fine-tuning</text>
-                    <line x1="95" y1="60" x2="141" y2="60" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,2"/>
-                    <line x1="189" y1="60" x2="234" y2="60" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,2"/>
-                    <rect x="236" y="40" width="76" height="40" rx="7" fill="#200a40" stroke="#7c3aed" stroke-width="1"/>
-                    <text x="274" y="58" font-family="monospace" font-size="6" fill="#c4b5fd" text-anchor="middle">Sentiment</text>
-                    <text x="274" y="70" font-family="monospace" font-size="5.5" fill="#8b5cf6" text-anchor="middle">Classification</text>
-                    <text x="165" y="114" font-family="monospace" font-size="5" fill="#3b1a6a" text-anchor="middle">Yelp Review Sentiment · NLP · Updated Dec 2025</text>
-                </svg>
-            </div>
-            <div class="project-body">
-                <div class="project-meta">
-                    <span class="proj-badge badge-aca">NLP · GITHUB</span>
-                    <span class="proj-company">srinivasand04/NLP_Project · Updated Dec 2025</span>
-                </div>
-                <div class="proj-title">Yelp Review Sentiment Analysis — Transformers</div>
-                <div class="proj-desc">NLP project for sentiment classification on Yelp reviews using Transformer models (BERT / DistilBERT) with HuggingFace fine-tuning and evaluation on large-scale review data.</div>
-                <div class="proj-tabs">
-                    <div class="proj-tab active" onclick="switchTab(this,'t5')">Tech Stack</div>
-                    <div class="proj-tab" onclick="switchTab(this,'r5')">Responsibilities</div>
-                    <div class="proj-tab" onclick="switchTab(this,'i5')">Impact</div>
-                </div>
-                <div id="t5" class="proj-tab-content active"><div class="tech-pills">
-                    <span class="tech-pill tp-purple">BERT</span><span class="tech-pill tp-purple">DistilBERT</span><span class="tech-pill tp-purple">HuggingFace</span><span class="tech-pill tp-purple">Transformers</span><span class="tech-pill tp-green">Python</span><span class="tech-pill tp-blue">Pandas</span><span class="tech-pill">Jupyter Notebook</span><span class="tech-pill tp-orange">Fine-tuning</span>
-                </div></div>
-                <div id="r5" class="proj-tab-content"><ul class="resp-list">
-                    <li>Fine-tuned BERT and DistilBERT on Yelp review dataset for sentiment classification</li>
-                    <li>Preprocessing pipeline: tokenization, padding, attention masks</li>
-                    <li>Evaluated models with accuracy, F1-score, and confusion matrix</li>
-                    <li>Compared Transformer-based vs traditional ML baselines</li>
-                </ul></div>
-                <div id="i5" class="proj-tab-content"><div class="impact-pills">
-                    <span class="impact-pill">BERT fine-tuned</span><span class="impact-pill">Yelp dataset</span><span class="impact-pill">Transformer NLP</span>
-                </div></div>
-            </div>
-            <div class="proj-footer">
-                <div class="proj-status"><div class="status-dot dot-blue"></div>Open Source · Jupyter</div>
-                <a class="project-link" href="https://github.com/srinivasand04/NLP_Project" target="_blank" rel="noopener noreferrer">GitHub →</a>
-            </div>
-        </div>
-
-        <!-- 4. Employee Attrition Prediction -->
-        <div class="project-card academic reveal" data-cat="academic">
-            <div class="project-banner" style="background:linear-gradient(135deg,#0f1a0a,#162812);">
-                <svg viewBox="0 0 330 130" width="100%" height="100%">
-                    <rect width="330" height="130" fill="#0f1a0a"/>
-                    <rect x="18" y="28" width="82" height="74" rx="7" fill="#162812" stroke="#22c55e" stroke-width="1.2"/>
-                    <text x="59" y="57" font-family="monospace" font-size="6" fill="#86efac" text-anchor="middle">Data Ingestion</text>
-                    <text x="59" y="69" font-family="monospace" font-size="6" fill="#4ade80" text-anchor="middle">Feature Eng.</text>
-                    <text x="59" y="81" font-family="monospace" font-size="5.5" fill="#22c55e" text-anchor="middle">Pandas / NumPy</text>
-                    <line x1="102" y1="65" x2="118" y2="65" stroke="#22c55e" stroke-width="1.2"/><polygon points="116,62 122,65 116,68" fill="#22c55e"/>
-                    <rect x="121" y="28" width="88" height="74" rx="7" fill="#162812" stroke="#4ade80" stroke-width="1.2"/>
-                    <text x="165" y="57" font-family="monospace" font-size="6" fill="#86efac" text-anchor="middle">Scikit-learn</text>
-                    <text x="165" y="69" font-family="monospace" font-size="6" fill="#4ade80" text-anchor="middle">Random Forest</text>
-                    <text x="165" y="81" font-family="monospace" font-size="5.5" fill="#22c55e" text-anchor="middle">XGBoost / SHAP</text>
-                    <line x1="211" y1="65" x2="229" y2="65" stroke="#22c55e" stroke-width="1.2"/><polygon points="227,62 233,65 227,68" fill="#22c55e"/>
-                    <rect x="232" y="36" width="82" height="58" rx="7" fill="#162812" stroke="#86efac" stroke-width="1.2"/>
-                    <text x="273" y="62" font-family="monospace" font-size="6" fill="#86efac" text-anchor="middle">MLflow</text>
-                    <text x="273" y="74" font-family="monospace" font-size="5.5" fill="#4ade80" text-anchor="middle">MLOps Pipeline</text>
-                    <text x="165" y="114" font-family="monospace" font-size="5" fill="#1a3010" text-anchor="middle">Employee Attrition Prediction · MLOps · Updated Feb 2026</text>
-                </svg>
-            </div>
-            <div class="project-body">
-                <div class="project-meta">
-                    <span class="proj-badge badge-aca">MLOPS · GITHUB</span>
-                    <span class="proj-company">srinivasand04 · Updated Feb 2026</span>
-                </div>
-                <div class="proj-title">Employee Attrition Prediction — MLOps</div>
-                <div class="proj-desc">End-to-end MLOps pipeline to predict employee attrition using machine learning — feature engineering, model training, experiment tracking with MLflow, and automated deployment.</div>
-                <div class="proj-tabs">
-                    <div class="proj-tab active" onclick="switchTab(this,'t4')">Tech Stack</div>
-                    <div class="proj-tab" onclick="switchTab(this,'r4')">Responsibilities</div>
-                    <div class="proj-tab" onclick="switchTab(this,'i4')">Impact</div>
-                </div>
-                <div id="t4" class="proj-tab-content active"><div class="tech-pills">
-                    <span class="tech-pill tp-green">Python</span><span class="tech-pill tp-green">Scikit-learn</span><span class="tech-pill tp-green">XGBoost</span><span class="tech-pill tp-blue">Pandas</span><span class="tech-pill tp-blue">NumPy</span><span class="tech-pill tp-purple">MLflow</span><span class="tech-pill">SHAP</span><span class="tech-pill tp-orange">MLOps Pipeline</span>
-                </div></div>
-                <div id="r4" class="proj-tab-content"><ul class="resp-list">
-                    <li>Built end-to-end MLOps pipeline for employee attrition classification</li>
-                    <li>Feature engineering and preprocessing with Pandas / NumPy</li>
-                    <li>Trained Random Forest and XGBoost models with hyperparameter tuning</li>
-                    <li>Tracked experiments, metrics and model artifacts using MLflow</li>
-                    <li>SHAP-based model interpretability and feature importance analysis</li>
-                </ul></div>
-                <div id="i4" class="proj-tab-content"><div class="impact-pills">
-                    <span class="impact-pill">MLflow tracking</span><span class="impact-pill">SHAP explainability</span><span class="impact-pill">End-to-end MLOps</span>
-                </div></div>
-            </div>
-            <div class="proj-footer">
-                <div class="proj-status"><div class="status-dot dot-blue"></div>Open Source · Python</div>
-                <a class="project-link" href="https://github.com/srinivasand04/employee-attrition-MLOPS" target="_blank" rel="noopener noreferrer">GitHub →</a>
-            </div>
-        </div>
-
-        <!-- 5. Stock Market ML & Deep Learning -->
-        <div class="project-card academic reveal" data-cat="academic">
-            <div class="project-banner" style="background:linear-gradient(135deg,#0e0818,#1a0f30);">
-                <svg viewBox="0 0 330 130" width="100%" height="100%">
-                    <rect width="330" height="130" fill="#0e0818"/>
-                    <polyline points="20,105 55,88 90,92 125,70 160,55 195,42 230,48 265,28 300,24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round"/>
-                    <polyline points="20,115 55,100 90,108 125,90 160,75 195,62 230,66 265,48 300,40" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="5,3" stroke-linecap="round"/>
-                    <circle cx="265" cy="28" r="4" fill="#d8b4fe"/>
-                    <circle cx="195" cy="42" r="3.5" fill="#a855f7"/>
-                    <circle cx="125" cy="70" r="3" fill="#7c3aed"/>
-                    <text x="165" y="14" font-family="monospace" font-size="6" fill="#d8b4fe" text-anchor="middle">LSTM · GRU · CNN · Transformer</text>
-                    <text x="165" y="122" font-family="monospace" font-size="5" fill="#3b1f6a" text-anchor="middle">Stock Market ML/DL Prediction · Updated Jan 2026</text>
-                </svg>
-            </div>
-            <div class="project-body">
-                <div class="project-meta">
-                    <span class="proj-badge badge-aca">DEEP LEARNING · GITHUB</span>
-                    <span class="proj-company">srinivasand04 · Updated Jan 2026</span>
-                </div>
-                <div class="proj-title">Stock Market ML &amp; Deep Learning Prediction</div>
-                <div class="proj-desc">Advanced stock market prediction using multiple deep learning architectures — LSTM, GRU, CNN, and Transformer models with comparative analysis on historical price data.</div>
-                <div class="proj-tabs">
-                    <div class="proj-tab active" onclick="switchTab(this,'t7')">Tech Stack</div>
-                    <div class="proj-tab" onclick="switchTab(this,'r7')">Responsibilities</div>
-                    <div class="proj-tab" onclick="switchTab(this,'i7')">Impact</div>
-                </div>
-                <div id="t7" class="proj-tab-content active"><div class="tech-pills">
-                    <span class="tech-pill tp-purple">LSTM</span><span class="tech-pill tp-purple">GRU</span><span class="tech-pill tp-purple">CNN</span><span class="tech-pill tp-purple">Transformer</span><span class="tech-pill tp-green">Python</span><span class="tech-pill tp-green">TensorFlow / Keras</span><span class="tech-pill tp-blue">Pandas</span><span class="tech-pill">Jupyter Notebook</span>
-                </div></div>
-                <div id="r7" class="proj-tab-content"><ul class="resp-list">
-                    <li>Implemented LSTM, GRU, CNN and Transformer models for time-series stock prediction</li>
-                    <li>Data preprocessing: normalization, sliding window, train/test split</li>
-                    <li>Comparative model evaluation — RMSE, MAE, directional accuracy</li>
-                    <li>Visualized predictions vs actual prices with Matplotlib</li>
-                </ul></div>
-                <div id="i7" class="proj-tab-content"><div class="impact-pills">
-                    <span class="impact-pill">4 DL architectures</span><span class="impact-pill">Time-series forecasting</span><span class="impact-pill">Comparative analysis</span>
-                </div></div>
-            </div>
-            <div class="proj-footer">
-                <div class="proj-status"><div class="status-dot dot-blue"></div>Open Source · Jupyter</div>
-                <a class="project-link" href="https://github.com/srinivasand04/Stock-Market-ML-DL-Prediction_Deep_Learning" target="_blank" rel="noopener noreferrer">GitHub →</a>
-            </div>
-        </div>
-
-        <!-- 6. AQI Big Data Pipeline -->
-        <div class="project-card academic reveal" data-cat="academic">
-            <div class="project-banner" style="background:linear-gradient(135deg,#0a1628,#0c2240);">
-                <svg viewBox="0 0 330 130" width="100%" height="100%">
-                    <rect width="330" height="130" fill="#0a1628"/>
-                    <rect x="16" y="28" width="72" height="74" rx="7" fill="#0d1f3e" stroke="#22d3ee" stroke-width="1.2"/>
-                    <text x="52" y="57" font-family="monospace" font-size="6" fill="#67e8f9" text-anchor="middle">Apache</text>
-                    <text x="52" y="69" font-family="monospace" font-size="6" fill="#22d3ee" text-anchor="middle">Kafka</text>
-                    <text x="52" y="81" font-family="monospace" font-size="5.5" fill="#06b6d4" text-anchor="middle">Streaming</text>
-                    <line x1="90" y1="65" x2="106" y2="65" stroke="#22d3ee" stroke-width="1.2"/><polygon points="104,62 110,65 104,68" fill="#22d3ee"/>
-                    <rect x="109" y="28" width="72" height="74" rx="7" fill="#0d1f3e" stroke="#4ade80" stroke-width="1.2"/>
-                    <text x="145" y="57" font-family="monospace" font-size="6" fill="#86efac" text-anchor="middle">PySpark</text>
-                    <text x="145" y="69" font-family="monospace" font-size="6" fill="#4ade80" text-anchor="middle">Hadoop</text>
-                    <text x="145" y="81" font-family="monospace" font-size="5.5" fill="#22c55e" text-anchor="middle">HDFS</text>
-                    <line x1="183" y1="65" x2="199" y2="65" stroke="#4ade80" stroke-width="1.2"/><polygon points="197,62 203,65 197,68" fill="#4ade80"/>
-                    <rect x="202" y="28" width="72" height="74" rx="7" fill="#0d1f3e" stroke="#f59e0b" stroke-width="1.2"/>
-                    <text x="238" y="57" font-family="monospace" font-size="6" fill="#fcd34d" text-anchor="middle">Power BI</text>
-                    <text x="238" y="69" font-family="monospace" font-size="6" fill="#fbbf24" text-anchor="middle">DAX</text>
-                    <text x="238" y="81" font-family="monospace" font-size="5.5" fill="#f59e0b" text-anchor="middle">AQI Dashboard</text>
-                    <text x="165" y="114" font-family="monospace" font-size="5" fill="#1e3a5a" text-anchor="middle">AQI Big Data Project · Shell / PySpark · Updated Feb 2026</text>
-                </svg>
-            </div>
-            <div class="project-body">
-                <div class="project-meta">
-                    <span class="proj-badge badge-aca">BIG DATA · GITHUB</span>
-                    <span class="proj-company">srinivasand04/BigData_Project · Updated Feb 2026</span>
-                </div>
-                <div class="proj-title">AQI Big Data Pipeline — Kafka &amp; PySpark</div>
-                <div class="proj-desc">Real-time air quality index (AQI) big data pipeline — Kafka streaming ingestion, PySpark processing on Hadoop/HDFS, and Power BI dashboards for environmental analytics.</div>
-                <div class="proj-tabs">
-                    <div class="proj-tab active" onclick="switchTab(this,'t8')">Tech Stack</div>
-                    <div class="proj-tab" onclick="switchTab(this,'r8')">Responsibilities</div>
-                    <div class="proj-tab" onclick="switchTab(this,'i8')">Impact</div>
-                </div>
-                <div id="t8" class="proj-tab-content active"><div class="tech-pills">
-                    <span class="tech-pill tp-teal">Apache Kafka</span><span class="tech-pill tp-teal">PySpark</span><span class="tech-pill tp-teal">Hadoop / HDFS</span><span class="tech-pill tp-orange">Power BI</span><span class="tech-pill tp-orange">DAX</span><span class="tech-pill tp-green">Python</span><span class="tech-pill">Shell Script</span><span class="tech-pill">Data Lake</span>
-                </div></div>
-                <div id="r8" class="proj-tab-content"><ul class="resp-list">
-                    <li>Built Kafka streaming pipeline for real-time AQI sensor data ingestion</li>
-                    <li>Processed and transformed data using PySpark on Hadoop cluster</li>
-                    <li>Stored processed data in HDFS data lake for batch analytics</li>
-                    <li>Built Power BI dashboard with DAX measures for AQI trend visualisation</li>
-                </ul></div>
-                <div id="i8" class="proj-tab-content"><div class="impact-pills">
-                    <span class="impact-pill">Real-time streaming</span><span class="impact-pill">Hadoop/HDFS</span><span class="impact-pill">AQI dashboard</span><span class="impact-pill">ESILV project</span>
-                </div></div>
-            </div>
-            <div class="proj-footer">
-                <div class="proj-status"><div class="status-dot dot-blue"></div>Open Source · Shell / Python</div>
-                <a class="project-link" href="https://github.com/srinivasand04/BigData_Project" target="_blank" rel="noopener noreferrer">GitHub →</a>
-            </div>
-        </div>
-
-        <!-- 7. Computer Vision -->
-        <div class="project-card academic reveal" data-cat="academic">
-            <div class="project-banner" style="background:linear-gradient(135deg,#0f1520,#1a2535);">
-                <svg viewBox="0 0 330 130" width="100%" height="100%">
-                    <rect width="330" height="130" fill="#0f1520"/>
-                    <rect x="90" y="22" width="150" height="86" rx="8" fill="#1a2535" stroke="#3b82f6" stroke-width="1.2"/>
-                    <rect x="105" y="35" width="120" height="60" rx="4" fill="#0f1520"/>
-                    <circle cx="165" cy="65" r="18" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
-                    <circle cx="165" cy="65" r="8" fill="#1d4ed8" opacity="0.6"/>
-                    <line x1="165" y1="37" x2="165" y2="47" stroke="#3b82f6" stroke-width="1.2"/>
-                    <line x1="165" y1="83" x2="165" y2="93" stroke="#3b82f6" stroke-width="1.2"/>
-                    <line x1="137" y1="65" x2="147" y2="65" stroke="#3b82f6" stroke-width="1.2"/>
-                    <line x1="183" y1="65" x2="193" y2="65" stroke="#3b82f6" stroke-width="1.2"/>
-                    <rect x="18" y="44" width="68" height="42" rx="6" fill="#1a2535" stroke="#22d3ee" stroke-width="1"/>
-                    <text x="52" y="63" font-family="monospace" font-size="6" fill="#67e8f9" text-anchor="middle">OpenCV</text>
-                    <text x="52" y="75" font-family="monospace" font-size="5.5" fill="#22d3ee" text-anchor="middle">CNN Models</text>
-                    <rect x="244" y="44" width="68" height="42" rx="6" fill="#1a2535" stroke="#4ade80" stroke-width="1"/>
-                    <text x="278" y="63" font-family="monospace" font-size="6" fill="#86efac" text-anchor="middle">PyTorch</text>
-                    <text x="278" y="75" font-family="monospace" font-size="5.5" fill="#4ade80" text-anchor="middle">Image Class.</text>
-                    <text x="165" y="118" font-family="monospace" font-size="5" fill="#1a2a3a" text-anchor="middle">Computer Vision · Data Labs · Updated Jan 2026</text>
-                </svg>
-            </div>
-            <div class="project-body">
-                <div class="project-meta">
-                    <span class="proj-badge badge-aca">COMPUTER VISION · GITHUB</span>
-                    <span class="proj-company">srinivasand04/ComputerVision · Updated Jan 2026</span>
-                </div>
-                <div class="proj-title">Computer Vision — Data Labs</div>
-                <div class="proj-desc">Computer vision experiments and data lab notebooks — image classification, object detection, and CNN model exploration using OpenCV and PyTorch as part of ESILV coursework.</div>
-                <div class="proj-tabs">
-                    <div class="proj-tab active" onclick="switchTab(this,'t9')">Tech Stack</div>
-                    <div class="proj-tab" onclick="switchTab(this,'r9')">Responsibilities</div>
-                    <div class="proj-tab" onclick="switchTab(this,'i9')">Impact</div>
-                </div>
-                <div id="t9" class="proj-tab-content active"><div class="tech-pills">
-                    <span class="tech-pill tp-blue">OpenCV</span><span class="tech-pill tp-purple">PyTorch</span><span class="tech-pill tp-green">Python</span><span class="tech-pill tp-green">Scikit-learn</span><span class="tech-pill">CNN</span><span class="tech-pill">Image Classification</span><span class="tech-pill">Jupyter Notebook</span>
-                </div></div>
-                <div id="r9" class="proj-tab-content"><ul class="resp-list">
-                    <li>Image preprocessing and augmentation pipelines with OpenCV</li>
-                    <li>CNN architecture design and training for image classification tasks</li>
-                    <li>Model evaluation: accuracy, confusion matrix, precision/recall</li>
-                    <li>Experimented with transfer learning using pretrained PyTorch models</li>
-                </ul></div>
-                <div id="i9" class="proj-tab-content"><div class="impact-pills">
-                    <span class="impact-pill">CNN classification</span><span class="impact-pill">Transfer learning</span><span class="impact-pill">ESILV coursework</span>
-                </div></div>
-            </div>
-            <div class="proj-footer">
-                <div class="proj-status"><div class="status-dot dot-blue"></div>Open Source · Jupyter</div>
-                <a class="project-link" href="https://github.com/srinivasand04/ComputerVision" target="_blank" rel="noopener noreferrer">GitHub →</a>
-            </div>
-        </div>
-
-    </div>
-
     <div style="text-align:center;margin-top:52px;">
         <a class="btn-primary reveal" href="https://github.com/srinivasand04" target="_blank" rel="noopener noreferrer">
             <span class="en-text">View All on GitHub →</span>
@@ -810,11 +1136,10 @@ function filterProj(cat, btn) {
     document.querySelectorAll(".project-card").forEach(function(c){
         c.style.display = (cat === "all" || c.dataset.cat === cat) ? "flex" : "none";
     });
-    document.getElementById("cat-pro").style.display = (cat === "academic") ? "none" : "";
-    var acaLabel = document.getElementById("cat-aca");
-    var acaSub = acaLabel ? acaLabel.nextElementSibling : null;
-    if (acaLabel) acaLabel.style.display = (cat === "professional") ? "none" : "";
-    if (acaSub && acaSub.tagName === "P") acaSub.style.display = (cat === "professional") ? "none" : "";
+    var showGh = cat !== "professional";
+    document.getElementById("cat-gh").style.display = showGh ? "" : "none";
+    document.getElementById("cat-gh-sub").style.display = showGh ? "" : "none";
+    document.getElementById("cat-pro").style.display = (cat === "all" || cat === "professional") ? "" : "none";
 }
 </script>
 
@@ -845,8 +1170,8 @@ function filterProj(cat, btn) {
             <div class="footer-col-brand">
                 <div class="footer-brand">Srinivasan<span>.</span></div>
                 <p class="footer-tagline">
-                    <span class="en-text">Senior .NET Engineer &amp; Data/AI Specialist · Based in Paris · Open to Europe.</span>
-                    <span class="fr-text">Ingénieur .NET Senior &amp; Data/IA · Basé à Paris · Disponible en Europe.</span>
+                    <span class="en-text">AI Engineer · LLM, agentic &amp; AI backend systems · 8+ yrs enterprise engineering · Paris.</span>
+                    <span class="fr-text">Ingénieur IA · LLM, agents &amp; backend IA · 8+ ans d'ingénierie entreprise · Paris.</span>
                 </p>
             </div>
 
